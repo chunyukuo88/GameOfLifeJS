@@ -16,11 +16,11 @@ function changeColor(){
 }
 
 function createCells (){
-  for (let i = 0 ; i < 25 ; i++){
+  for (let i = 0 ; i < 36 ; i++){
     const gridItem = document.createElement("p");
-    gridItem.classList.add("grid-item");
     //This innerText uses the unicode blank character, NOT a space:
     gridItem.innerText = "⠀";
+    gridItem.id += " grid-item-" + i;
     gridItem.addEventListener("click", changeColor);
     cellGrid.append(gridItem);
   }
