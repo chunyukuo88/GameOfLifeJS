@@ -11,8 +11,8 @@
 .grid-wrapper {
     background: green;
     display: grid;
-    grid-template-columns:  repeat(5, 100px);
-    grid-template-rows:     repeat(5, 100px);
+    grid-template-columns:  repeat(5, 20px);
+    grid-template-rows:     repeat(5, 20px);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
 }

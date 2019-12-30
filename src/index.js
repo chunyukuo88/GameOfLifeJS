@@ -1,4 +1,4 @@
-const myApp = document.querySelector(".myApp");
+const myApp = document.getElementById("app");
 const gridWrapper = document.createElement("wrapper");
 gridWrapper.classList.add("grid-wrapper");
 myApp.append(gridWrapper);
