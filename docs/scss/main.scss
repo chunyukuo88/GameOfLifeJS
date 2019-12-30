@@ -1,3 +1,7 @@
+body {
+    background: red;
+}
+
 .grid-item {
     background: white;
     width: 20px;
@@ -8,11 +12,22 @@
     border-radius: 5px;
 }
   
-.grid-wrapper {
+.grid {
     background: green;
     display: grid;
     grid-template-columns:  repeat(5, 20px);
     grid-template-rows:     repeat(5, 20px);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
+    border: 1;
+    margin: 1;
+    padding: 1;
+}
+
+.grid-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px;
+    margin: 1px;
+    padding: 1px;
 }

@@ -1,7 +1,12 @@
 const myApp = document.getElementById("app");
+
 const gridWrapper = document.createElement("wrapper");
 gridWrapper.classList.add("grid-wrapper");
 myApp.append(gridWrapper);
+
+const cellGrid = document.createElement("section");
+cellGrid.classList.add("grid");
+gridWrapper.append(cellGrid);
 
 
 
@@ -17,7 +22,7 @@ function createCells (){
     //This innerText uses the unicode blank character, NOT a space:
     gridItem.innerText = "⠀";
     gridItem.addEventListener("click", changeColor);
-    gridWrapper.append(gridItem);
+    cellGrid.append(gridItem);
   }
 }
 
