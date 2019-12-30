@@ -1,0 +1,18 @@
+.grid-item {
+    background: white;
+    width: 20px;
+    justify-self: start;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+  
+.grid-wrapper {
+    background: green;
+    display: grid;
+    grid-template-columns:  repeat(5, 100px);
+    grid-template-rows:     repeat(5, 100px);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+}
