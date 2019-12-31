@@ -1,11 +1,6 @@
 const cellsAndGrid = require("./js/cellsAndGrid");
-const getFromAPI = require("./js/fetchCellsFromAPI");
+const getInfoFromApi = require("./js/fetchCellsFromAPI");
 
-
-
-
-
-
-
-// cellsAndGrid.generateGrid();
-// getFromAPI.produceDishes();
+cellsAndGrid.generateGrid();
+getInfoFromApi.getInfoFromApi();
+getInfoFromApi.produceDishes();

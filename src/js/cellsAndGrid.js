@@ -1,5 +1,4 @@
-
-function generateGrid() {
+exports.generateGrid = () => {
         const myApp = document.getElementById("app");
         
         const gridWrapper = document.createElement("wrapper");
@@ -16,7 +15,4 @@ function generateGrid() {
             gridItem.className += " grid-item-" + i;
             cellGrid.append(gridItem);
         }
-}
-
-
-module.exports = generateGrid();
+};

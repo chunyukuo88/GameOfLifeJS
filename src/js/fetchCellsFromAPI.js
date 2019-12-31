@@ -1,5 +1,4 @@
-
-function getInfoFromApi(){
+exports.getInfoFromApi = ()=> {
 
     const url = "http://localhost:8080/petri-dishes";
     const options = { method: "GET", headers: { "Accept": "application/json" } };
@@ -13,20 +12,19 @@ function getInfoFromApi(){
                 }
             )}
         );
-        console.log("getInfoFromApi function works");
+        console.log("||||||||| This prints if getInfoFromApi() works ||||||||||");
     return arrayOfPetriDishes;
-}
+};
 
-function produceDishes(){
-    const myApp = document.getElementById("app");
+exports.produceDishes = ()=> {
+    const wrapper = document.getElementsByClassName("grid-wrapper");
     let arrayOfPetriDishes = getInfoFromApi();
     
     for (let index = 0; index < arrayOfPetriDishes.length; index++) {
-      const dish = document.createElement("p");
-      dish.innerText = arrayOfPetriDishes[i].inputArray;
-      myApp.append(dish);
       console.log("ITERATION #" + index);
+      const dish = document.createElement("wrapper");
+      dish.innerText = arrayOfPetriDishes[i].inputArray;
+      wrapper.append(dish);
     }
-  }
-
-// module.exports = getInfoFromApi, produceDishes;
+    console.log("||||||||| This prints if produceDishes() works ||||||||||");
+};
