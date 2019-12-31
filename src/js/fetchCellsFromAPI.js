@@ -12,7 +12,7 @@ exports.getInfoFromApi = ()=> {
                 }
             )}
         );
-        console.log("||||||||| This prints if getInfoFromApi() works ||||||||||");
+        console.log("||||||||| This prints if getInfoFromApi() runs ||||||||||");
     return arrayOfPetriDishes;
 };
 
@@ -26,5 +26,5 @@ exports.produceDishes = ()=> {
       dish.innerText = arrayOfPetriDishes[i].inputArray;
       wrapper.append(dish);
     }
-    console.log("||||||||| This prints if produceDishes() works ||||||||||");
+    console.log("||||||||| This prints if produceDishes() runs ||||||||||");
 };
