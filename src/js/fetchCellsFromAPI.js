@@ -2,7 +2,7 @@ exports.getInfoFromApi = ()=> {
 
     const url = "http://localhost:8080/petri-dishes";
     const options = { method: "GET", headers: { "Accept": "application/json" } };
-    const arrayOfPetriDishes = [];
+    let arrayOfPetriDishes = [];
 
     fetch(url, options)
         .then(res => res.json())
@@ -12,19 +12,23 @@ exports.getInfoFromApi = ()=> {
                 }
             )}
         );
-        console.log("||||||||| This prints if getInfoFromApi() runs ||||||||||");
     return arrayOfPetriDishes;
 };
 
-exports.produceDishes = ()=> {
-    const wrapper = document.getElementsByClassName("grid-wrapper");
-    let arrayOfPetriDishes = getInfoFromApi();
+exports.produceDishes = (arrayOfPetriDishes)=> {
+    const body = document.getElementById("app");
     
-    for (let index = 0; index < arrayOfPetriDishes.length; index++) {
-      console.log("ITERATION #" + index);
-      const dish = document.createElement("wrapper");
-      dish.innerText = arrayOfPetriDishes[i].inputArray;
-      wrapper.append(dish);
-    }
+    const dish = document.createElement("section");
+    let firstDish = arrayOfPetriDishes[0];
+    console.log(firstDish);
+    body.append(dish);
+
+    // for (let index = 0; index < arrayOfPetriDishes.length; index++) {
+    //   console.log("ITERATION #" + index);
+    //   const dish = document.createElement("section");
+    //   dish.innerText = arrayOfPetriDishes[i].inputArray;
+    //   wrapper.append(dish);
+    // }
+
     console.log("||||||||| This prints if produceDishes() runs ||||||||||");
 };
