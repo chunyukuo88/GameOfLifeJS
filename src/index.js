@@ -1,7 +1,11 @@
 const cellsAndGrid = require("./js/cellsAndGrid");
-const testFetch = require("./js/fetchCellsFromAPI");
+const getFromAPI = require("./js/fetchCellsFromAPI");
 
-testFetch.getInfoFromApi();
-cellsAndGrid.generateGrid();
 
-console.log("howzit howzit");
+
+
+
+
+
+// cellsAndGrid.generateGrid();
+// getFromAPI.produceDishes();
