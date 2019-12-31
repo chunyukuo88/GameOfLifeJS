@@ -1,23 +1,11 @@
 exports.generateGrid = () => {        
-        /*
-        const myApp = document.getElementById("app");
 
-        const gridWrapper = document.createElement("wrapper");
-        gridWrapper.classList.add("grid-wrapper");
-        myApp.append(gridWrapper);
-
-        const cellGrid = document.createElement("section");
-        cellGrid.classList.add("grid");
-        gridWrapper.append(cellGrid);
-        */
       const myApp = document.getElementById("app");
       const gridWrapper = document.createElement("wrapper");    
-      gridWrapper.id = "gridWrapper";
-
       const cellGrid = document.createElement("section");   
-      cellGrid.classList.add("cellGrid");
       
-      myApp.append(gridWrapper);
+      gridWrapper.id = "gridWrapper";
+      cellGrid.classList.add("cellGrid");    
       
       for (let i = 0 ; i < 64 ; i++){
         const gridItem = document.createElement("p");
@@ -26,5 +14,6 @@ exports.generateGrid = () => {
         cellGrid.append(gridItem);
       }
       
+      myApp.append(gridWrapper);
       document.getElementById("gridWrapper").appendChild(cellGrid);
 };
