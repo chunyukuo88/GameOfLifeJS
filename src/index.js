@@ -9,7 +9,10 @@ cellsAndGrid.generateGrid();
 
 let arrays = extractFromApi.getInfoFromApi();
 const ApiInfo = document.createElement("div");
-ApiInfo.innerText = arrays;
-document.getElementById("gridWrapper").append(ApiInfo);
+for (let index = 0; index < arrays.length; index++) {
+    const element = array[index];
+    ApiInfo.innerText = arrays;
+    document.getElementById("gridWrapper").append(ApiInfo);
+}
 
 console.log(arrays);

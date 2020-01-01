@@ -11,15 +11,12 @@ module.exports = {
         await fetch(url, options)
             .then(res => res.json())
             .then( petriDishes => {
-                // petriDishes.forEach( dish => {
-                //     arrayOfPetriDishes.push(dish);
-                //     }
-                // )}
-                arrayOfPetriDishes = petriDishes;
-            }
+                petriDishes.forEach( dish => {
+                    arrayOfPetriDishes.push(dish);
+                    }
+                )}
             );
-            console.log(arrayOfPetriDishes.length);
-            console.log(arrayOfPetriDishes[2].inputArray);
+
         return arrayOfPetriDishes;
     },
     
