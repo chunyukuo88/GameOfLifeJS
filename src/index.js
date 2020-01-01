@@ -5,7 +5,11 @@ const heading = require("./js/heading");
 
 heading.generateHeading();
 cellsAndGrid.generateGrid();
-// extractFromApi.produceDishes(arrays);
+
 
 let arrays = extractFromApi.getInfoFromApi();
+const ApiInfo = document.createElement("div");
+ApiInfo.innerText = arrays;
+document.getElementById("gridWrapper").append(ApiInfo);
+
 console.log(arrays);
