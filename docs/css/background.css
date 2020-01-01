@@ -3,17 +3,7 @@ body {
     /*This next command keeps the inherited background full-sized*/
     background-attachment: fixed;
     background-size: cover;
+    color: yellow;
     font-family: 'Acme', sans-serif;
+    backdrop-filter: blur(5px);
   }
-
-.container {
-    background: inherit;
-}
-
-.container:before {
-    background: inherit;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-    content: '';
-    filter: blur(8px);
-    position: absolute;
-}
