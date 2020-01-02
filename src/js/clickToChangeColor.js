@@ -2,13 +2,12 @@ module.exports = {
 
     makeCellsColorChangeable(cell){
         
-        
-        cell.addEventListener("click", ()=> {
-            
-            if (cell.style.background = "red")
-                cell.style.background = "green";
-
-        })
+        cell.addEventListener("mousedown", ()=> {
+            if (cell.style.backgroundColor === 'white') {
+                cell.style.backgroundColor = 'orange';   
+              }
+              else cell.style.backgroundColor = 'white';
+    })
 
     
     }
