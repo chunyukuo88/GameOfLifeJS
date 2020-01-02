@@ -1,4 +1,4 @@
-const colorChanger = require("./clickToChangeColor");
+const colorChanger = require("./cellColors");
 
 module.exports = {
     
@@ -18,8 +18,8 @@ module.exports = {
                     for (let j = 0; j < 8; j++){
                         const cell = document.createElement("p");
                         cell.innerText = json[2].inputArray[i][j];
+                        colorChanger.apiColors(cell); //Applies background-color AND removes the '@' and '.' from the API data.
                         cell.classList.add("grid-item");
-                        //on-click to change background color
                         cell.addEventListener("load", colorChanger.makeCellsColorChangeable(cell));
                         document.getElementById("cellGrid").append(cell);
                         }
