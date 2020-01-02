@@ -6,14 +6,7 @@ const heading = require("./js/heading");
 heading.generateHeading();
 cellsAndGrid.generateGrid();
 
-extractFromApi.getInfoFromApi();
 
-// console.log(extractFromApi.getInfoFromApi());
-
-// const junk = document.getElementById("junk");
-
-// const APIdata = extractFromApi.getInfoFromApi();
-
-// const garbage = document.createElement("h2");
-// garbage.innerText = "garbage";
-// junk.append(garbage);
+// Attach this to a button
+const junk = extractFromApi.getInfoFromApi;
+junk();
