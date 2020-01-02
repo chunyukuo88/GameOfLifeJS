@@ -8,7 +8,7 @@ module.exports = {
     },
 
     stepButton(){
-        const step = document.createElement("button");
+        const step = document.createElement("a");
         step.classList.add("step");
         step.innerText = "Step";
         let welcome = document.getElementById("welcomePanel");

@@ -10,6 +10,7 @@ const cellsAndGrid = require("./js/cellsAndGrid");
 //BUTTONS
 const panel = require("./js/panel");
     panel.welcomePanel();
+    panel.stepButton();
 
 //DATA
 const extractFromApi = require("./js/renderCellsFromAPI");
