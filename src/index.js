@@ -8,6 +8,8 @@ const cellsAndGrid = require("./js/cellsAndGrid");
     cellsAndGrid.generateCells();
 
 //DATA
-const extractFromApi = require("./js/fetchCellsFromAPI");
+const extractFromApi = require("./js/renderCellsFromAPI");
     const apiCells = extractFromApi.getInfoFromApi;
     apiCells();
+
+//CELL PROCESSING

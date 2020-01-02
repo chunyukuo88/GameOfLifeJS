@@ -1,4 +1,4 @@
-const getCells = require("./fetchCellsFromAPI");
+const getCells = require("./renderCellsFromAPI");
 
 module.exports = {        
 
