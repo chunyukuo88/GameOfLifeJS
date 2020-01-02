@@ -4,7 +4,8 @@ const heading = require("./js/heading");
 
 
 heading.generateHeading();
-cellsAndGrid.generateGrid();
+cellsAndGrid.generateGridFromApi();
+
 
 
 // Attach this to a button
