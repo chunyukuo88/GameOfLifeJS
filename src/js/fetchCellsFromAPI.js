@@ -10,12 +10,12 @@ module.exports = {
     
         await fetch(url, options)
             .then(res => res.json())
-            .then( petriDishes => {
-                arrayOfPetriDishes = petriDishes;
+            .then( json => {
+                document.getElementById("junk").innerText = json;
                 }
             )
             .catch("Fetch failed");
-        return arrayOfPetriDishes;
+        // return arrayOfPetriDishes;
     },
     
 
