@@ -1,13 +1,13 @@
-const cellsAndGrid = require("./js/cellsAndGrid");
-const extractFromApi = require("./js/fetchCellsFromAPI");
+//TITLE
 const heading = require("./js/heading");
+    heading.generateHeading();
 
+//LAYOUT
+const cellsAndGrid = require("./js/cellsAndGrid");
+    cellsAndGrid.generateGridWrapper();
+    cellsAndGrid.generateCells();
 
-heading.generateHeading();
-cellsAndGrid.generateGridFromApi();
-
-
-
-// Attach this to a button
-const junk = extractFromApi.getInfoFromApi;
-junk();
+//DATA
+const extractFromApi = require("./js/fetchCellsFromAPI");
+    const apiCells = extractFromApi.getInfoFromApi;
+    apiCells();

@@ -12,9 +12,9 @@ module.exports = {
             .then(json => {
                 for (let i = 0; i < 8; i++) {
                     for (let j = 0; j < 8; j++){
-                    const rubbish = document.createElement("p");
-                    rubbish.innerText = json[2].inputArray[i][j];
-                    document.getElementById("junk").append(rubbish);
+                    const cell = document.createElement("p");
+                    cell.innerText = json[2].inputArray[i][j];
+                    document.getElementById("cellGrid").append(cell);
                         }
                     }
                 }
