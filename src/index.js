@@ -7,12 +7,13 @@ heading.generateHeading();
 cellsAndGrid.generateGrid();
 
 
-let arrays = extractFromApi.getInfoFromApi();
-const ApiInfo = document.createElement("div");
-for (let index = 0; index < arrays.length; index++) {
-    const element = array[index];
-    ApiInfo.innerText = arrays;
-    document.getElementById("gridWrapper").append(ApiInfo);
-}
 
-console.log(arrays);
+console.log(extractFromApi.getInfoFromApi());
+
+const junk = document.getElementById("junk");
+
+const APIdata = extractFromApi.getInfoFromApi();
+
+const garbage = document.createElement("h2");
+garbage.innerText = "garbage";
+junk.append(garbage);

@@ -1,25 +1,31 @@
 module.exports = {
-
+    
     async getInfoFromApi() {
 
         const url = "http://localhost:8080/petri-dishes";
         const options = { method: "GET", 
-                          headers: { "Content-type": "text/plain" } 
+                          headers: { "Content-type": "application/JSON" } 
                         };
         let arrayOfPetriDishes = [];
     
         await fetch(url, options)
             .then(res => res.json())
             .then( petriDishes => {
-                petriDishes.forEach( dish => {
-                    arrayOfPetriDishes.push(dish);
-                    }
-                )}
-            );
-
+                arrayOfPetriDishes = petriDishes;
+                }
+            )
+            .catch("Fetch failed");
         return arrayOfPetriDishes;
     },
     
+
+
+
+
+
+
+
+
     produceDishes (arrayOfPetriDishes) {
     
         const body = document.getElementById("app");
