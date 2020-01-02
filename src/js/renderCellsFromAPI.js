@@ -20,7 +20,7 @@ module.exports = {
                         cell.innerText = json[2].inputArray[i][j];
                         cell.classList.add("grid-item");
                         //on-click to change background color
-                        cell.addEventListener("click", colorChanger.makeCellsColorChangeable(cell));
+                        cell.addEventListener("load", colorChanger.makeCellsColorChangeable(cell));
                         document.getElementById("cellGrid").append(cell);
                         }
                     }

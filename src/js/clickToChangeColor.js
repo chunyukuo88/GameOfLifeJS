@@ -1,12 +1,15 @@
 module.exports = {   
 
     makeCellsColorChangeable(cell){
-        if (cell.style.color = "green" == false) {
-            cell.style.color = "green";
-        } else {
-            cell.style.color = "red";
-        }
         
-    }
+        
+        cell.addEventListener("click", ()=> {
+            
+            if (cell.style.background = "red")
+                cell.style.background = "green";
 
+        })
+
+    
+    }
 }
