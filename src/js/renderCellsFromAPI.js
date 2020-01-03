@@ -1,4 +1,5 @@
 const colorChanger = require("./cellColors");
+// const populateCellArray = require("./cellArrayEval");
 
 module.exports = {
     
@@ -8,7 +9,7 @@ module.exports = {
         const options = { method: "GET", 
                           headers: { "Content-type": "application/JSON" } 
                         };
-
+        let cellArray = [];
         await fetch(url, options)
             .then(res => res.json())
             .then(json => {
@@ -19,13 +20,16 @@ module.exports = {
                     for (let j = 0; j < 8; j++){
                         const cell = document.createElement("p");
                         cell.innerText = json[2].inputArray[i][j];
+                        let value = cell.innerText === '@' ? 1 : 0;
                         colorChanger.apiColors(cell); //Applies background-color AND removes the '@' and '.' from the API data.
                         cell.classList.add("grid-item-" + k);
                         k++;
+                        cellArray.push(value);
                         cell.addEventListener("load", colorChanger.makeCellsColorChangeable(cell));
                         document.getElementById("cellGrid").append(cell);
                         }
                     }
+                console.log(cellArray);
                 }
             )
             .catch("Fetch failed");

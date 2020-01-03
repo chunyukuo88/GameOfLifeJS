@@ -16,3 +16,9 @@ const panel = require("./js/panel");
 const extractFromApi = require("./js/renderCellsFromAPI");
     const apiCells = extractFromApi.getInfoFromApi;
     apiCells();
+
+//EVALUATION
+const eval = require("./js/stepper");
+    const step = eval.stepper;
+    const input = document.getElementsByClassName("grid-item-1");
+    step(input);
