@@ -5,7 +5,19 @@ const heading = require("./js/heading");
 //LAYOUT
 const cellsAndGrid = require("./js/cellsAndGrid");
     cellsAndGrid.generateGridWrapper();
-    cellsAndGrid.generateCells();
+
+    let generalArray = [
+        0, 1, 0, 0, 0, 0, 0, 0, 
+        0, 0, 1, 0, 0, 0, 0, 0, 
+        1, 1, 1, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+    ];
+
+    cellsAndGrid.generateCells(generalArray);
 
 //BUTTONS
 const panel = require("./js/panel");
@@ -15,7 +27,7 @@ const panel = require("./js/panel");
 //DATA
 const extractFromApi = require("./js/renderCellsFromAPI");
     const apiCells = extractFromApi.getInfoFromApi;
-    apiCells();
+    generalArray = apiCells();
 
 //EVALUATION
 const eval = require("./js/stepper");

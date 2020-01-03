@@ -6,8 +6,7 @@ module.exports = {
             if (cell.style.backgroundColor === 'white') {
                 cell.style.backgroundColor = 'orange';   
               }
-              else cell.style.backgroundColor = 'white';
-            // cell.style.backgroundColor === 'white' ? 'orange' : 'white';
+            else cell.style.backgroundColor = 'white';
         })
     },
 
