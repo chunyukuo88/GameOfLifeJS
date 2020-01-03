@@ -7,9 +7,9 @@ const cellsAndGrid = require("./js/cellsAndGrid");
     cellsAndGrid.generateGridWrapper();
 
     let generalArray = [
-        0, 1, 0, 0, 0, 0, 0, 0, 
-        0, 0, 1, 0, 0, 0, 0, 0, 
-        1, 1, 1, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
@@ -25,12 +25,13 @@ const panel = require("./js/panel");
     panel.stepButton();
 
 //DATA
-const extractFromApi = require("./js/renderCellsFromAPI");
-    const apiCells = extractFromApi.getInfoFromApi;
-    generalArray = apiCells();
+const renderCellsFromAPI = require("./js/renderCellsFromAPI");
+    const apiCells = renderCellsFromAPI.getInfoFromApi;
+    apiCells(generalArray);
+    console.log("General array: " + generalArray);
 
 //EVALUATION
-const eval = require("./js/stepper");
-    const step = eval.stepper;
-    const input = document.getElementsByClassName("grid-item-1");
-    step(input);
+// const eval = require("./js/stepper");
+//     const step = eval.stepper;
+//     const input = document.getElementsByClassName("grid-item-1");
+//     step(input);

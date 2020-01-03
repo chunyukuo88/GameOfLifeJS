@@ -1,6 +1,6 @@
 const getCells = require("./renderCellsFromAPI");
 const valuesFromGeneralArray = require("../index");
-const colorChanger = require("./cellColors");
+const onUserClick = require("./cellColors");
 
 module.exports = {        
 
@@ -18,7 +18,7 @@ module.exports = {
     document.getElementById("gridWrapper").appendChild(cellGrid);
     let primaryArray = array;
 
-    console.log("This is the array I want to color cells based on: " + primaryArray);
+    // console.log("This is the array I want to color cells based on: " + primaryArray);
 
     for (let index = 0; index < primaryArray.length; index++) {
       let element = primaryArray[index];
@@ -29,9 +29,7 @@ module.exports = {
       cell.classList.add("grid-item-" + element);
       document.getElementById("cellGrid").append(cell);
       
-      cell.addEventListener("load", colorChanger.makeCellsColorChangeable(cell));
-      // colorChanger.apiColors(cell); //Applies background-color AND removes the '@' and '.' from the API data.
-      
+      cell.addEventListener("load", onUserClick.updateColorAndArray(cell, element));
     }
     return primaryArray;
   }

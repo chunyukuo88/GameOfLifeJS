@@ -1,51 +1,28 @@
-const colorChanger = require("./cellColors");
-// const populateCellArray = require("./cellArrayEval");
 
 module.exports = {
     
-    async getInfoFromApi() {
+    async getInfoFromApi(cellArray) {
 
         const url = "http://localhost:8080/petri-dishes";
         const options = { method: "GET", 
                           headers: { "Content-type": "application/JSON" } 
                         };
-        
-        let cellArray = [];
 
         await fetch(url, options)
             .then(res => res.json())
             .then(json => {
-                let k = 0;
-                for (let i = 0; i < 8; i++) {
-                    for (let j = 0; j < 8; j++){
-                        let value = cell.innerText === '@' ? 1 : 0;
-                        k++;
-                        cellArray.push(value);
+                let propellors = json[1].inputArray;
+                let inputIndex = 0;
+                for (let i = 0 ; i < propellors.length; i++) {
+                    for (let j = 0; j < propellors[0].length; j++) {
+                        cellArray[inputIndex] = propellors[i][j];
                         }
-                    }
-                console.log(cellArray);
+                    }        
                 }
             )
+            console.log("Array with API data: " + cellArray)
             .catch("Fetch failed");
             return cellArray;
-    },
-    
+    }
 
-
-
-
-
-
-
-// I don't think this is necessary anymore...
-    // produceDishes (arrayOfPetriDishes) {
-    
-    //     const body = document.getElementById("app");
-    //     const dish = document.createElement("section");
-    //     body.append(dish);
-
-    //     if (Array.isArray(arrayOfPetriDishes)){
-    //             console.log(arrayOfPetriDishes.length);
-    //     }
-    // }
 }

@@ -1,25 +1,17 @@
 module.exports = {   
 
-    makeCellsColorChangeable(cell){
-        
+
+
+    updateColorAndArray(cell, element){    
         cell.addEventListener("mousedown", ()=> {
-            if (cell.style.backgroundColor === 'white') {
+            if (cell.style.backgroundColor === 'white')
                 cell.style.backgroundColor = 'orange';   
-              }
             else cell.style.backgroundColor = 'white';
+
+            element = (element === 0) ? 1 : 0;
+
         })
-    },
-
-    apiColors(cell){
-        if (cell.innerText === '@') {
-            cell.innerText = "";
-            cell.style.backgroundColor = 'orange';
-        }
-        if (cell.innerText === '.') {
-            cell.innerText = "";
-        }
     }
-
 
 
 
