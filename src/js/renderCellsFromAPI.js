@@ -12,14 +12,16 @@ module.exports = {
         await fetch(url, options)
             .then(res => res.json())
             .then(json => {
-                // Doing it this way produces a grid of 64 cells, as opposed to the format
-                // of the required input, which is 8 rows (arrays) of 8 cells apiece.
+                // Note that this produces a grid of 64 cells, as opposed to the format
+                // of the required input, which is 8 arrays of arrays, each 8 cells apiece.
+                let k = 0;
                 for (let i = 0; i < 8; i++) {
                     for (let j = 0; j < 8; j++){
                         const cell = document.createElement("p");
                         cell.innerText = json[2].inputArray[i][j];
                         colorChanger.apiColors(cell); //Applies background-color AND removes the '@' and '.' from the API data.
-                        cell.classList.add("grid-item");
+                        cell.classList.add("grid-item-" + k);
+                        k++;
                         cell.addEventListener("load", colorChanger.makeCellsColorChangeable(cell));
                         document.getElementById("cellGrid").append(cell);
                         }
