@@ -28,10 +28,17 @@ const panel = require("./js/panel");
 const renderCellsFromAPI = require("./js/renderCellsFromAPI");
     const apiCells = renderCellsFromAPI.getInfoFromApi;
     apiCells(generalArray);
-    console.log("General array: " + generalArray);
+    
 
-//EVALUATION
-// const eval = require("./js/stepper");
-//     const step = eval.stepper;
-//     const input = document.getElementsByClassName("grid-item-1");
-//     step(input);
+// Keep this just for purposes of testing the fetch()--------------
+    const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+      };
+
+    const doSomething = async () => {
+        await sleep(2000);
+        console.log("General array: " + generalArray);
+        
+      }
+      doSomething();
+// ---------------------------------------------------------------
