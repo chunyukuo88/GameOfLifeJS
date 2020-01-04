@@ -22,22 +22,27 @@ const cellsAndGrid = require("./js/cellsAndGrid");
 //BUTTONS
 const panel = require("./js/panel");
     panel.welcomePanel();
-    panel.stepButton();
+    panel.createButtons("Clear");
 
 //DATA
 const renderCellsFromAPI = require("./js/renderCellsFromAPI");
-    const apiCells = renderCellsFromAPI.getInfoFromApi;
+    const apiCells = renderCellsFromAPI.updateBasedOnAPI;
     apiCells(generalArray);
-    
 
-// Keep this just for purposes of testing the fetch()--------------
+
+
+
+
+
+
+//------- Keep this just for purposes of testing the fetch()------
     const sleep = (milliseconds) => {
         return new Promise(resolve => setTimeout(resolve, milliseconds))
       };
 
     const doSomething = async () => {
         await sleep(2000);
-        console.log("General array: " + generalArray);
+        console.log("General array: " + generalArray); // <======THIS HERE
         
       }
       doSomething();

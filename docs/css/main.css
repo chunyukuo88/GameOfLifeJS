@@ -63,7 +63,7 @@ p:nth-child(n):hover {
   background: gray;
 }
 
-.step{
+.panel-button{
   border-radius: 5px;
 }
 

@@ -1,7 +1,7 @@
 
 module.exports = {
     
-    async getInfoFromApi(cellArray) {
+    async updateBasedOnAPI(cellArray) {
 
         const url = "http://localhost:8080/petri-dishes";
         const options = { method: "GET", 
