@@ -13,8 +13,9 @@ module.exports = {
             .then(json => {
                 let propellors = json[1].inputArray;
                 let inputIndex = 0;
-                for (let i = 0 ; i < propellors.length; i++) {
-                    for (let j = 0; j < propellors[0].length; j++, inputIndex++) {
+                for (let i = 0 ; i < 8; i++) {
+                    for (let j = 0; j < 8; j++, inputIndex++) {
+                        console.log(inputIndex);
                         cellArray[inputIndex] = propellors[i][j] === '@' ? 1 : 0;
                         }
                     }        
