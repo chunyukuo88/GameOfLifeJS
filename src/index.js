@@ -22,7 +22,9 @@ const cellsAndGrid = require("./js/cellsAndGrid");
 //BUTTONS
 const panel = require("./js/panel");
     panel.welcomePanel();
-    panel.createButtons("Clear");
+        panel.createButton("Clear");
+        panel.createButton("Tumbler");
+        panel.createButton("Propellors");
 
 //DATA
 const renderCellsFromAPI = require("./js/renderCellsFromAPI");

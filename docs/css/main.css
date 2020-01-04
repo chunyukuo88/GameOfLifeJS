@@ -74,6 +74,7 @@ p:nth-child(n):hover {
   width: 120px;
   
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
