@@ -7,7 +7,7 @@ const cellsAndGrid = require("./js/cellsAndGrid");
     cellsAndGrid.generateGridWrapper();
 
     let generalArray = [
-        0, 0, 0, 0, 0, 0, 0, 0, 
+        1, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
@@ -22,14 +22,14 @@ const cellsAndGrid = require("./js/cellsAndGrid");
 //BUTTONS
 const panel = require("./js/panel");
     panel.welcomePanel();
-        panel.createButton("Clear");
-        panel.createButton("Tumbler");
-        panel.createButton("Propellors");
-
+        panel.createButton(generalArray, "Blank"); //ID: 1
+        panel.createButton(generalArray, "Tumbler"); //ID: 2
+        panel.createButton(generalArray, "Propellors");//ID: 3
+        panel.createLogButton(generalArray);
 //DATA
-const renderCellsFromAPI = require("./js/renderCellsFromAPI");
-    const apiCells = renderCellsFromAPI.updateBasedOnAPI;
-    apiCells(generalArray);
+// const renderCellsFromAPI = require("./js/renderCellsFromAPI");
+//     const apiCells = renderCellsFromAPI.updateBasedOnAPI;
+//     apiCells(generalArray, 1);
 
 
 
@@ -38,14 +38,5 @@ const renderCellsFromAPI = require("./js/renderCellsFromAPI");
 
 
 //------- Keep this just for purposes of testing the fetch()------
-    const sleep = (milliseconds) => {
-        return new Promise(resolve => setTimeout(resolve, milliseconds))
-      };
 
-    const doSomething = async () => {
-        await sleep(2000);
-        console.log("General array: " + generalArray); // <======THIS HERE
-        
-      }
-      doSomething();
 // ---------------------------------------------------------------
