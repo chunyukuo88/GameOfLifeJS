@@ -11,11 +11,13 @@ module.exports = {
         await fetch(url, options)
             .then(res => res.json())
             .then(json => {
-                let propellors = json[dishIdNumber].inputArray;
+                //The problem is here. The next line prints just fine 
+                //but the problem is when I pass it as a variable.
+                const apiArray = json[dishIdNumber].inputArray;
                 let inputIndex = 0;
                 for (let i = 0 ; i < 8; i++) {
                     for (let j = 0; j < 8; j++, inputIndex++) {
-                        generalArray[inputIndex] = propellors[i][j] === '@' ? 1 : 0;
+                        generalArray[inputIndex] = apiArray[i][j] === '@' ? 1 : 0;
                         }
                     }        
                 }

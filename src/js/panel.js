@@ -27,8 +27,8 @@ module.exports = {
                 break;
         }    
             let welcome = document.getElementById("welcomePanel");
+            button.onclick = renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber);
             welcome.appendChild(button);
-            button.addEventListener("click", renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber));
     },
 
     createLogButton(generalArray){
@@ -37,16 +37,5 @@ module.exports = {
         button.onclick = ()=>{console.log("Updated array:\n\n" + generalArray)};
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);
-
-
-        // const sleep = (milliseconds) => {
-        //     return new Promise(resolve => setTimeout(resolve, milliseconds))
-        // };
-
-        // const printUpdatedArray = async () => {
-        //     await sleep(2000);
-        //     console.log("The general array has been updated to:\n\n" + generalArray);
-        // }
-        
     }
 }
