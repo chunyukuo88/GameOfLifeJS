@@ -34,19 +34,19 @@ module.exports = {
     createLogButton(generalArray){
         button = document.createElement("a");
         button.innerText =  "Log-Array";
+        button.onclick = ()=>{console.log("Updated array:\n\n" + generalArray)};
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);
 
 
-        const sleep = (milliseconds) => {
-            return new Promise(resolve => setTimeout(resolve, milliseconds))
-        };
+        // const sleep = (milliseconds) => {
+        //     return new Promise(resolve => setTimeout(resolve, milliseconds))
+        // };
 
-        const printUpdatedArray = async (generalArray) => {
-            await sleep(2000);
-            console.log("The general array has been updated to:\n\n" + generalArray);
-        }
+        // const printUpdatedArray = async () => {
+        //     await sleep(2000);
+        //     console.log("The general array has been updated to:\n\n" + generalArray);
+        // }
         
-        button.addEventListener("click", printUpdatedArray(generalArray));
     }
 }
