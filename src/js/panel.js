@@ -41,14 +41,14 @@ module.exports = {
         button.innerText =  "Log-Array";
         button.onclick = ()=>{
             console.log("Updated array:\n\n" + 
-            generalArray.slice(0, 7) + "\n" +
-            generalArray.slice(8, 15) + "\n" +
-            generalArray.slice(16, 23) + "\n" +
-            generalArray.slice(24, 31) + "\n" +
-            generalArray.slice(32, 39) + "\n" +
-            generalArray.slice(40, 47) + "\n" +
-            generalArray.slice(48, 55) + "\n" +
-            generalArray.slice(56, 63))
+            generalArray.slice(0, 8) + "\n" +
+            generalArray.slice(8, 16) + "\n" +
+            generalArray.slice(16, 24) + "\n" +
+            generalArray.slice(24, 32) + "\n" +
+            generalArray.slice(32, 40) + "\n" +
+            generalArray.slice(40, 48) + "\n" +
+            generalArray.slice(48, 56) + "\n" +
+            generalArray.slice(56))
         };
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);
