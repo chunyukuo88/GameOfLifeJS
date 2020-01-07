@@ -16,12 +16,12 @@ module.exports = {
     const cellGrid = document.createElement("section");   
     cellGrid.id = "cellGrid";    
     document.getElementById("gridWrapper").appendChild(cellGrid);
-    let primaryArray = array;
+    let generalArray = array;
 
-    // console.log("This is the array I want to color cells based on: " + primaryArray);
+    // console.log("This is the array I want to color cells based on: " + generalArray);
 
-    for (let index = 0; index < primaryArray.length; index++) {
-      let element = primaryArray[index];
+    for (let index = 0; index < generalArray.length; index++) {
+      let element = generalArray[index];
       const cell = document.createElement("p");
         
       cell.style.background = element === 1 ? 'orange' : 'white';
@@ -29,9 +29,16 @@ module.exports = {
       cell.classList.add("grid-item-" + index);
       document.getElementById("cellGrid").append(cell);
       
-      cell.addEventListener("load", onUserClick.updateColorAndArray(cell, element));
+      cell.addEventListener("load", 
+                            onUserClick.updateColorAndArray(cell, element),
+
+                            );
     }
-    return primaryArray;
+    return generalArray;
+  },
+
+  updateGeneralArray(cell, generalArray){
+    
   }
 
 }
