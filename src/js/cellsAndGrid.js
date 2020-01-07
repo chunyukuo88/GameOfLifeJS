@@ -26,7 +26,7 @@ module.exports = {
         
       cell.style.background = element === 1 ? 'orange' : 'white';
 
-      cell.classList.add("grid-item-" + element);
+      cell.classList.add("grid-item-" + index);
       document.getElementById("cellGrid").append(cell);
       
       cell.addEventListener("load", onUserClick.updateColorAndArray(cell, element));
