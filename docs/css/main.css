@@ -2,6 +2,9 @@
 
 a {
   border: 2px solid chartreuse;
+  border-radius: 2px;
+  margin: 1px;
+  padding: 3px;
 }
 
 a:hover {

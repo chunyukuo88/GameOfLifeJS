@@ -18,13 +18,13 @@ module.exports = {
         
         switch (buttonName) {
             case "Blank":
+                dishIdNumber = 0;
+                break;
+            case "Propellors":
                 dishIdNumber = 1;
                 break;
             case "Tumbler":
                 dishIdNumber = 2;
-                break;
-            case "Propellors":
-                dishIdNumber = 3;
                 break;
             default:
                 break;
@@ -32,7 +32,6 @@ module.exports = {
             let welcome = document.getElementById("welcomePanel");
             button.onclick = () =>{
                 renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber);
-                console.log(buttonName + " has been clicked.");
             }
             welcome.appendChild(button);
     },
