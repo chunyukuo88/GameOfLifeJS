@@ -30,7 +30,7 @@ module.exports = {
       document.getElementById("cellGrid").append(cell);
       
       cell.addEventListener("load", 
-                            onUserClick.updateColorAndArray(cell, element),
+                            onUserClick.updateColorAndArray(cell, element, generalArray),
 
                             );
     }
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   updateGeneralArray(cell, generalArray){
-    
+
   }
 
 }
