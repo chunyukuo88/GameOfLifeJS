@@ -5,7 +5,7 @@ module.exports = {
         cell.addEventListener("mousedown", ()=> {
 
             if (cell.style.backgroundColor === 'white'){
-                cell.style.backgroundColor = 'orange';  
+                cell.style.backgroundColor = 'chartreuse';  
                 generalArray[cell.className.slice(10)] = 1;
             } else {
                 cell.style.backgroundColor = 'white';
