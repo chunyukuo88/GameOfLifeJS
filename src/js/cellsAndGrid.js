@@ -18,20 +18,18 @@ module.exports = {
     document.getElementById("gridWrapper").appendChild(cellGrid);
     let generalArray = array;
 
-    // console.log("This is the array I want to color cells based on: " + generalArray);
-
     for (let index = 0; index < generalArray.length; index++) {
       let element = generalArray[index];
       const cell = document.createElement("p");
-        
-      cell.style.background = element === 1 ? 'orange' : 'white';
+      
+      cell.style.background = element === 1 ? 'chartreuse' : 'white';
 
       cell.classList.add("grid-item-" + index);
       document.getElementById("cellGrid").append(cell);
       
       cell.addEventListener("load", 
                             onUserClick.updateColorAndArray(cell, element, generalArray),
-
+                            
                             );
     }
     return generalArray;

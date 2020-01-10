@@ -1,3 +1,4 @@
+const cellsAndGrid = require("./cellsAndGrid");
 const renderCellsFromAPI = require("./renderCellsFromAPI");
 
 
@@ -32,6 +33,8 @@ module.exports = {
             let welcome = document.getElementById("welcomePanel");
             button.onclick = () =>{
                 renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber);
+                //Clear grid cells
+                //Grid cells re-populate
             }
             welcome.appendChild(button);
     },
