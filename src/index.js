@@ -63,4 +63,4 @@ const panel = require("./js/panel");
 
 import { fromEvent } from 'rxjs';
 
-fromEvent(generalArray, 'change').subscribe(() => console.log('Clicked!'));
+fromEvent(document, 'click').subscribe(() => console.log('Clicked!'));
