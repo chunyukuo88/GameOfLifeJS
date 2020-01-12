@@ -60,7 +60,46 @@ const panel = require("./js/panel");
 // );
 
 
+//updated from Garbage Overflow:
+//https://stackoverflow.com/questions/59701279/cause-any-changes-made-to-an-array-to-trigger-a-function-call-vanilla-js/59701296?noredirect=1#comment105567296_59701296
+// import { BehaviorSubject } from 'rxjs';
+// messageSource = new BehaviorSubject(false);
+// currentMessage = this.messageSource.asObservable();
 
-import { fromEvent } from 'rxjs';
+// changeMessage(message) {
+//     this.messageSource.next(message);
+// }
 
-fromEvent(document, 'click').subscribe(() => console.log('Clicked!'));
+// currentMessage.subscribe(val => {
+//     //logic
+// })
+
+
+
+//Another brilliant idea from Garbage Overflow:
+//https://stackoverflow.com/questions/5100376/how-to-watch-for-array-changes
+
+// (function() {
+
+//     if (!("Proxy" in window)) {
+//       console.warn("Your browser doesn't support Proxies.");
+//       return;
+//     }
+//     // a proxy for our array
+//     var proxy = new Proxy(generalArray, {
+//       apply: function(target, thisArg, argumentsList) {
+//         return thisArg[target].apply(this, argumentList);
+//       },
+//       deleteProperty: function(target, property) {
+//         console.log("Deleted %s", property);
+//         return true;
+//       },
+//       set: function(target, property, value, receiver) {      
+//         target[property] = value;
+//         console.log("Set %s to %o", property, value);
+//         return true;
+//       }
+//     });  
+//     console.log("Current state of array: %o", generalArray);
+// })();
+
