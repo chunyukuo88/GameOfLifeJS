@@ -19,8 +19,7 @@ const cellsAndGrid = require("./js/cellsAndGrid");
     ];
     cellsAndGrid.generateCells(generalArray);
 
-//MONITOR ARRAY
-const changeable = require("./js/on-change");
+
 
 
 //BUTTONS
@@ -31,16 +30,37 @@ const panel = require("./js/panel");
         panel.createButton(generalArray, "Propellors");//ID: 3
         panel.createLogButton(generalArray);
 
-//DATA
-// const renderCellsFromAPI = require("./js/renderCellsFromAPI");
-//     const apiCells = renderCellsFromAPI.updateBasedOnAPI;
-//     apiCells(generalArray, 1);
 
 
-// Source:
-// https://github.com/sindresorhus/on-change   (This has been added to package.json)
-const onChange = require('on-change');
-const foo = onChange({
-	a: generalArray
-}, () => console.log(foo));
 
+// let arr = new Proxy(array, {
+//     set() {
+//       alert('array mutated');
+//       return true;
+//     }
+//   });
+
+// arr(generalArray);
+
+
+//wrap observable around general array.
+//the observable is infinite; it is never 'complete'.
+//then have the observer make a function call.
+
+
+
+//From https://www.youtube.com/watch?v=Tux1nhBPl_w&feature=emb_logo
+// import { Observable } from 'rxjs';
+
+// let button = document.querySelector('a');
+
+// let xyz = Observable.fromEvent(button, 'click')
+// 	.subscribe(
+// 		(value) => console.log(value.clientX)
+// );
+
+
+
+import { fromEvent } from 'rxjs';
+
+fromEvent(generalArray, 'change').subscribe(() => console.log('Clicked!'));

@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "dependencies": {
-    "on-change": "^1.6.2"
+    "on-change": "^1.6.2",
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
     "jest": "^24.9.0",
