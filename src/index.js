@@ -6,8 +6,10 @@ const heading = require("./js/heading");
 
 //LAYOUT
 const cellsAndGrid = require("./js/cellsAndGrid");
-    cellsAndGrid.generateGridWrapper();
-    let generalArray = [
+cellsAndGrid.generateGridWrapper();
+    
+    import { observable, autorun } from "mobx"
+    let generalArray = observable([
         1, 0, 0, 0, 0, 0, 0, 0, 
         0, 1, 0, 0, 0, 0, 0, 0, 
         0, 0, 1, 0, 0, 0, 0, 0, 
@@ -16,8 +18,12 @@ const cellsAndGrid = require("./js/cellsAndGrid");
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
-    ];
+    ]);
     cellsAndGrid.generateCells(generalArray);
+    
+    autorun(() => {
+        console.log(generalArray);
+    })
 
 
 
@@ -29,6 +35,23 @@ const panel = require("./js/panel");
         panel.createButton(generalArray, "Tumbler"); //ID: 2
         panel.createButton(generalArray, "Propellors");//ID: 3
         panel.createLogButton(generalArray);
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
