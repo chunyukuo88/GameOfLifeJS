@@ -1,4 +1,4 @@
-import Rx from 'rxjs/Rx';
+
 
 //TITLE
 const heading = require("./js/heading");
@@ -19,6 +19,8 @@ const cellsAndGrid = require("./js/cellsAndGrid");
     ];
     cellsAndGrid.generateCells(generalArray);
 
+//MONITOR ARRAY
+const changeable = require("./js/on-change");
 
 
 //BUTTONS
@@ -33,3 +35,12 @@ const panel = require("./js/panel");
 // const renderCellsFromAPI = require("./js/renderCellsFromAPI");
 //     const apiCells = renderCellsFromAPI.updateBasedOnAPI;
 //     apiCells(generalArray, 1);
+
+
+// Source:
+// https://github.com/sindresorhus/on-change   (This has been added to package.json)
+const onChange = require('on-change');
+const foo = onChange({
+	a: generalArray
+}, () => console.log(foo));
+
