@@ -28,15 +28,17 @@ module.exports = {
       document.getElementById("cellGrid").append(cell);
       
       cell.addEventListener("load", 
-                            onUserClick.updateColorAndArray(cell, element, generalArray),
-                            
-                            );
+                            onUserClick.updateColorAndArray(cell, element, generalArray));
     }
     return generalArray;
   },
 
-  updateGeneralArray(cell, generalArray){
-
+  updateVisualization(generalArray){
+    for (let index = 0; index < generalArray.length; index++) {
+      const cell = document.getElementsByClassName("grid-item-" + index.toString());
+      console.log(cell);
+      // cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
+    }
   }
 
 }
