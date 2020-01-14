@@ -8,7 +8,7 @@ const heading = require("./js/heading");
 const cellsAndGrid = require("./js/cellsAndGrid");
 cellsAndGrid.generateGridWrapper();
     
-    import { observable, autorun } from "mobx"
+    import { observable, observe } from "mobx"
     let generalArray = observable([
         1, 0, 0, 0, 0, 0, 0, 0, 
         0, 1, 0, 0, 0, 0, 0, 0, 
@@ -21,10 +21,7 @@ cellsAndGrid.generateGridWrapper();
     ]);
     cellsAndGrid.generateCells(generalArray);
     
-    autorun(() => {
-        console.log(generalArray);
-    })
-
+    observe(generalArray, change =>console.log("w00000000000000000t"));
 
 
 
