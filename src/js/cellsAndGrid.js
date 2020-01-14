@@ -25,6 +25,7 @@ module.exports = {
       cell.style.background = element === 1 ? 'chartreuse' : 'white';
 
       cell.classList.add("grid-item-" + index);
+      cell.id = ("grid-ID-" + index);
       document.getElementById("cellGrid").append(cell);
       
       cell.addEventListener("load", 
@@ -34,11 +35,19 @@ module.exports = {
   },
 
   updateVisualization(generalArray){
+    
     for (let index = 0; index < generalArray.length; index++) {
-      const cell = document.getElementsByClassName("grid-item-" + index.toString());
-      console.log(cell);
-      // cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
+      if (generalArray[index] === 1) {
+        cell = document.getElementsByTagName('p');
+        console.log(cell);
+        // cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
+      }
+      
     }
+
+
   }
+
+
 
 }
