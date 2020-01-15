@@ -12,11 +12,10 @@ module.exports = {
     myApp.append(gridWrapper);
   },
 
-  generateCells(array){
+  generateCells(generalArray){
     const cellGrid = document.createElement("section");   
     cellGrid.id = "cellGrid";    
     document.getElementById("gridWrapper").appendChild(cellGrid);
-    let generalArray = array;
 
     for (let index = 0; index < generalArray.length; index++) {
       let element = generalArray[index];
@@ -37,12 +36,8 @@ module.exports = {
   updateVisualization(generalArray){
     
     for (let index = 0; index < generalArray.length; index++) {
-      if (generalArray[index] === 1) {
-        cell = document.getElementsByTagName('p');
-        console.log(cell);
-        // cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
-      }
-      
+        cell = document.getElementById("grid-ID-"+index);
+        cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
     }
 
 
