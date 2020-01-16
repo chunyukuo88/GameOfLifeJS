@@ -57,11 +57,17 @@ module.exports = {
         welcome.appendChild(button);
     },
 
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+     },
+
     createStepButton(generalArray){
         button = document.createElement("a");
         button.innerText =  "Step";
         button.onclick = ()=>{
            generalArray = alg.evaluateDish(generalArray);
+           console.log("\n\n=================\n\n\n")
+           cellsAndGrid.updateVisualization(generalArray);
         };
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);

@@ -37,7 +37,6 @@ module.exports = {
   updateVisualization(generalArray){
     for (let index = 0; index < generalArray.length; index++) {
         cell = document.getElementById("grid-ID-"+index);
-        // generalArray = alg.evaluateDish(generalArray);
         cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
     }
   }
