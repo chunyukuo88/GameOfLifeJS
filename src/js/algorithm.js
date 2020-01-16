@@ -3,25 +3,25 @@
 module.exports = {
 
     evaluateDish(generalArray){
-        result = generalArray;
+        generalArray;
         for (let index = 0; index < 8; index++) {
             let neighbors = 0;
-            if (result[index-1] === 1){neighbors++;}
-            if (result[index+1] === 1){neighbors++;}
-                // Refactor this as ternary operator only after the visualization
-                // update works:
-            if (neighbors > 1) {
-                result[index] = 1;
-            } else {
-                result[index] = 0;
-            }
+            if (generalArray[index-1] === 1){neighbors++;}
+            if (generalArray[index+1] === 1){neighbors++;}
+                
+            if (neighbors === 1)
+                generalArray[index] = 1;
+            else
+                generalArray[index] = 0;
+            
+            console.log(neighbors);
         }
 
-        for (let index = 0; index < result.length; index++) {
-            console.log(result[index]);
+        for (let index = 0; index < 8; index++) {
+            console.log(generalArray[index]);
         }
 
-        return result;
+        return generalArray;
     }
 
 }
