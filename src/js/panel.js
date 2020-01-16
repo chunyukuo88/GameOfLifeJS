@@ -33,8 +33,6 @@ module.exports = {
             let welcome = document.getElementById("welcomePanel");
             button.onclick = () =>{
                 renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber);
-                //Clear grid cells
-                //Grid cells re-populate
             }
             welcome.appendChild(button);
     },
@@ -57,17 +55,14 @@ module.exports = {
         welcome.appendChild(button);
     },
 
-    sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-     },
-
     createStepButton(generalArray){
         button = document.createElement("a");
         button.innerText =  "Step";
         button.onclick = ()=>{
-           generalArray = alg.evaluateDish(generalArray);
-           console.log("\n\n=================\n\n\n")
-           cellsAndGrid.updateVisualization(generalArray);
+           alg.evaluateDish(generalArray);
+           //I technically should not have to have this onclick event trigger
+           //the updateVisualization function because the general array already
+           //has an observer that triggers whenever the values change.
         };
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);

@@ -4,12 +4,12 @@ module.exports = {
 
     },
 
-    evaluateDish(array){
+    evaluateDish(generalArray){
         for (let index = 0; index < 8; index++) {
-            let element = array[index];
+            let element = generalArray[index];
             let neighbors = 0;
-            if (array[index-1] === 1){neighbors++;}
-            if (array[index+1] === 1){neighbors++;}
+            if (generalArray[index-1] === 1){neighbors++;}
+            if (generalArray[index+1] === 1){neighbors++;}
                 // Refactor this as ternary operator only after the visualization
                 // update works.
             if (neighbors === 2) {
@@ -21,7 +21,7 @@ module.exports = {
             }
         }
 
-        return array;
+        return generalArray;
     }
 
 }
