@@ -10,10 +10,10 @@ cellsAndGrid.generateGridWrapper();
     
     import { observable, observe } from "mobx"
     let generalArray = observable([
-        1, 0, 0, 0, 0, 0, 0, 0, 
-        0, 1, 0, 0, 0, 0, 0, 0, 
         0, 0, 1, 0, 0, 0, 0, 0, 
-        0, 0, 0, 1, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 
@@ -32,3 +32,4 @@ const panel = require("./js/panel");
         panel.createButton(generalArray, "Tumbler"); //ID: 2
         panel.createButton(generalArray, "Propellors");//ID: 3
         panel.createLogButton(generalArray);
+        panel.createStepButton(generalArray);

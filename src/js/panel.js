@@ -1,6 +1,6 @@
 const cellsAndGrid = require("./cellsAndGrid");
 const renderCellsFromAPI = require("./renderCellsFromAPI");
-
+const alg = require("./algorithm");
 
 module.exports = {
 
@@ -52,6 +52,16 @@ module.exports = {
             generalArray.slice(40, 48) + "\n" +
             generalArray.slice(48, 56) + "\n" +
             generalArray.slice(56))
+        };
+        let welcome = document.getElementById("welcomePanel");
+        welcome.appendChild(button);
+    },
+
+    createStepButton(generalArray){
+        button = document.createElement("a");
+        button.innerText =  "Step";
+        button.onclick = ()=>{
+           generalArray = alg.evaluateDish(generalArray);
         };
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);
