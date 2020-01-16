@@ -1,7 +1,5 @@
-const getCells = require("./renderCellsFromAPI");
-const valuesFromGeneralArray = require("../index");
 const onUserClick = require("./cellColors");
-const alg = require("./algorithm");
+
 
 module.exports = {        
 
