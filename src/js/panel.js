@@ -60,11 +60,14 @@ module.exports = {
         button.innerText =  "Step";
         button.onclick = ()=>{
            alg.evaluateDish(generalArray);
-           //I technically should not have to have this onclick event trigger
+           //I should not have to have this onclick event trigger
            //the updateVisualization function because the general array already
            //has an observer that triggers whenever the values change.
+           return generalArray;
         };
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);
+
+        
     }
 }

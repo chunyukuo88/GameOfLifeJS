@@ -6,6 +6,7 @@ const heading = require("./js/heading");
 
 //LAYOUT
 const cellsAndGrid = require("./js/cellsAndGrid");
+
 cellsAndGrid.generateGridWrapper();
     
     import { observable, observe } from "mobx"
@@ -21,7 +22,9 @@ cellsAndGrid.generateGridWrapper();
     ]);
     cellsAndGrid.generateCells(generalArray);
     
-    observe(generalArray, change => cellsAndGrid.updateVisualization(generalArray));
+    observe(generalArray, () => {
+        cellsAndGrid.updateVisualization(generalArray)
+    });
 
 
 
