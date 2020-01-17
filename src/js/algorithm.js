@@ -7,7 +7,16 @@ module.exports = {
         neighborsArray = this.countNeighbors(generalArray);
 
         for (let i = 0; i < generalArray.length; i++) {
-            generalArray[i] = (generalArray[i] == 1 && neighborsArray[i] == 2) ? 1: 0;
+            if (generalArray[i] == 1 && neighborsArray[i] == 2)
+                generalArray[i] = 1;
+            else if (generalArray[i] == 1 && neighborsArray[i] < 2)
+                generalArray[i] = 0;
+            else if (neighborsArray[i] == 3)
+                generalArray[i] = 1;
+            else if (neighborsArray[i] > 3)
+                generalArray[i] = 0;
+            else
+                generalArray[i] = 0;
         }
 
         return generalArray;
