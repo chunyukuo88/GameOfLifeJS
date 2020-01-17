@@ -13,8 +13,8 @@ module.exports = {
             .then(json => {
                 const apiArray = json[dishIdNumber].inputArray;
                 let inputIndex = 0;
-                for (let i = 0 ; i < 8; i++) {
-                    for (let j = 0; j < 8; j++, inputIndex++) {
+                for (let i = 0 ; i < 16; i++) {
+                    for (let j = 0; j < 16; j++, inputIndex++) {
                         generalArray[inputIndex] = apiArray[i][j] === '@' ? 1 : 0;
                         }
                     }        

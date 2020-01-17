@@ -42,14 +42,24 @@ module.exports = {
         button.innerText =  "Log-Array";
         button.onclick = ()=>{
             console.log("Updated array:\n\n" + 
-            generalArray.slice(0, 8) + "\n" +
-            generalArray.slice(8, 16) + "\n" +
-            generalArray.slice(16, 24) + "\n" +
-            generalArray.slice(24, 32) + "\n" +
-            generalArray.slice(32, 40) + "\n" +
-            generalArray.slice(40, 48) + "\n" +
-            generalArray.slice(48, 56) + "\n" +
-            generalArray.slice(56))
+            generalArray.slice(0, 16) + "\n" +
+            generalArray.slice(16, 32) + "\n" +
+            generalArray.slice(32, 48) + "\n" +
+            generalArray.slice(48, 64) + "\n" +
+            generalArray.slice(64, 80) + "\n" +
+            generalArray.slice(80, 96) + "\n" +
+            generalArray.slice(96, 112) + "\n" +
+            generalArray.slice(112, 128) + "\n" +
+            generalArray.slice(128, 144) + "\n" +
+            generalArray.slice(144, 160) + "\n" +
+            generalArray.slice(160, 176) + "\n" +
+            generalArray.slice(176, 192) + "\n" +
+            generalArray.slice(176, 192) + "\n" +
+            generalArray.slice(192, 208) + "\n" +
+            generalArray.slice(208, 224) + "\n" +
+            generalArray.slice(224, 240) + "\n" +
+            generalArray.slice(240)
+            )
         };
         let welcome = document.getElementById("welcomePanel");
         welcome.appendChild(button);

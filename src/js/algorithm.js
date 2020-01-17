@@ -28,16 +28,16 @@ module.exports = {
         for (let index = 0; index < array.length; index++) {
             let neighbors = 0;
             //Neighbors from previous row
-            if (array[index-9] == 1){neighbors++;}
-            if (array[index-8] == 1){neighbors++;}
-            if (array[index-7] == 1){neighbors++;}
+            if (array[index-17] == 1){neighbors++;}
+            if (array[index-16] == 1){neighbors++;}
+            if (array[index-15] == 1){neighbors++;}
             //Neighbors from same row
             if (array[index-1] == 1){neighbors++;}
             if (array[index+1] == 1){neighbors++;}
             //Neighbors from following row
-            if (array[index+7] == 1){neighbors++;}
-            if (array[index+8] == 1){neighbors++;}
-            if (array[index+9] == 1){neighbors++;}
+            if (array[index+15] == 1){neighbors++;}
+            if (array[index+16] == 1){neighbors++;}
+            if (array[index+17] == 1){neighbors++;}
 
             result.push(neighbors);
         }
