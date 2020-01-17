@@ -4,28 +4,36 @@ module.exports = {
 
     evaluateDish(generalArray){
         
-        let neighborsArray = [];
+        neighborsArray = this.countNeighbors(generalArray);
 
-        for (let index = 0; index < 8; index++) {
-            let neighbors = 0;
-            if (generalArray[index-1] == 1){neighbors++;}
-            if (generalArray[index+1] == 1){neighbors++;}
-            neighborsArray.push(neighbors);
+        for (let i = 0; i < generalArray.length; i++) {
+            generalArray[i] = (generalArray[i] == 1 && neighborsArray[i] == 2) ? 1: 0;
         }
-
-        console.log(neighborsArray);
-
-        for (let index = 0; index < generalArray.length; index++) {
-            
-            if(generalArray[index] == 1 && neighborsArray[index] == 2){
-                generalArray[index] = 1;
-            }  else {
-                generalArray[index] = 0;
-            }
-        }
-
 
         return generalArray;
+    },
+
+    countNeighbors(array){
+        let result = [];
+
+        for (let index = 0; index < array.length; index++) {
+            let neighbors = 0;
+            //Neighbors from previous row
+            if (array[index-9] == 1){neighbors++;}
+            if (array[index-8] == 1){neighbors++;}
+            if (array[index-7] == 1){neighbors++;}
+            //Neighbors from same row
+            if (array[index-1] == 1){neighbors++;}
+            if (array[index+1] == 1){neighbors++;}
+            //Neighbors from following row
+            if (array[index+7] == 1){neighbors++;}
+            if (array[index+8] == 1){neighbors++;}
+            if (array[index+9] == 1){neighbors++;}
+
+            result.push(neighbors);
+        }
+
+        return result;
     }
 
 }
