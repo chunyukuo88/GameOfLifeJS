@@ -42,5 +42,5 @@ const panel = require("./js/panel");
         panel.createButton(generalArray, "Blank"); //ID: 0
         panel.createButton(generalArray, "Tumbler"); //ID: 2
         panel.createButton(generalArray, "Propellors");//ID: 3
-        panel.createLogButton(generalArray);
+        // panel.createLogButton(generalArray);
         panel.createStepButton(generalArray);
