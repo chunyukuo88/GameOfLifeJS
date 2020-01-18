@@ -35,7 +35,7 @@ module.exports = {
   updateVisualization(generalArray){
     for (let index = 0; index < generalArray.length; index++) {
         cell = document.getElementById("grid-ID-"+index);
-        cell.style.background = generalArray[index] === 1 ? 'chartreuse' : 'white';
+        cell.style.background = generalArray[index] === 1 ? 'fuchsia' : 'white';
     }
   }
 

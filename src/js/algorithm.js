@@ -25,22 +25,20 @@ module.exports = {
     countNeighbors(array){
         let result = [];
 
-        for (let index = 0; index < array.length; index++) {
-            let neighbors = 0;
-            //Neighbors from previous row
+        for (let index = 0; index < array.length; index++) {  
+            let neighbors = 0;  
+            //Neighbors from previous row  
             if (array[index-17] == 1){neighbors++;}
             if (array[index-16] == 1){neighbors++;}
             if (array[index-15] == 1){neighbors++;}
-            //Neighbors from same row
-            if (array[index-1] == 1){neighbors++;}
-            if (array[index+1] == 1){neighbors++;}
-            //Neighbors from following row
+            if (array[index-1]  == 1){neighbors++;}
+            if (array[index+1]  == 1){neighbors++;}
             if (array[index+15] == 1){neighbors++;}
             if (array[index+16] == 1){neighbors++;}
             if (array[index+17] == 1){neighbors++;}
-
-            result.push(neighbors);
-        }
+            console.log(neighbors);
+            result.push(neighbors);  
+    }  
 
         return result;
     }

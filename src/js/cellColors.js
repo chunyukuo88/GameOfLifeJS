@@ -4,13 +4,11 @@ module.exports = {
         
         cell.addEventListener("mousedown", ()=> {
 
-            if (cell.style.backgroundColor === 'white'){
-                cell.style.backgroundColor = 'chartreuse';  
+            if (cell.style.backgroundColor === 'white')
                 generalArray[cell.className.slice(10)] = 1;
-            } else {
-                cell.style.backgroundColor = 'white';
+            else
                 generalArray[cell.className.slice(10)] = 0;
-            }
+                
             element = (element === 0) ? 1 : 0;
 
         })
