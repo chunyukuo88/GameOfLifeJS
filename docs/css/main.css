@@ -53,17 +53,21 @@ h1:hover {
 p:nth-child(n) {
   background: white;
   border-radius: 5px;
+  box-shadow: 0 0 2px #000;
   justify-self: start;
   width: 20px;
   
   border: 0;
   margin: 0;
   padding: 0;
+
+  transition: 0.5s ease;
 }
 
 p:nth-child(n):hover {
-  border: 1px solid red;
+  border: 1px solid green;
   background: gray;
+  rotate: 135deg;
 }
 
 .panel-button{
