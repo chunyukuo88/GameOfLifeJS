@@ -39,8 +39,7 @@ cellsAndGrid.generateGridWrapper();
 //BUTTONS
 const panel = require("./js/panel");
     panel.welcomePanel();
-        panel.createButton(generalArray, "Blank"); //ID: 0
-        panel.createButton(generalArray, "Tumbler"); //ID: 2
-        panel.createButton(generalArray, "Propellors");//ID: 3
-        // panel.createLogButton(generalArray);
+        panel.createPresetButton(generalArray, "Blank"); //ID: 0
+        panel.createPresetButton(generalArray, "Tumbler"); //ID: 2
+        panel.createPresetButton(generalArray, "Propellors");//ID: 3
         panel.createStepButton(generalArray);

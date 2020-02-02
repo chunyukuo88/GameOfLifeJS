@@ -1,14 +1,14 @@
 
 module.exports = {
     
-    async updateBasedOnAPI(generalArray, dishIdNumber) {
+    updateBasedOnAPI(generalArray, dishIdNumber) {
 
         const url = "http://localhost:8080/petri-dishes";
         const options = { method: "GET", 
                           headers: { "Content-type": "application/JSON" } 
                         };
 
-        await fetch(url, options)
+         fetch(url, options)
             .then(res => res.json())
             .then(json => {
                 const apiArray = json[dishIdNumber].inputArray;
