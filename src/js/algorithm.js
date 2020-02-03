@@ -28,15 +28,14 @@ module.exports = {
         for (let index = 0; index < array.length; index++) {  
             let neighbors = 0;  
             //Neighbors from previous row  
-            if (array[index-17] == 1){neighbors++;}
-            if (array[index-16] == 1){neighbors++;}
-            if (array[index-15] == 1){neighbors++;}
-            if (array[index-1]  == 1){neighbors++;}
-            if (array[index+1]  == 1){neighbors++;}
-            if (array[index+15] == 1){neighbors++;}
-            if (array[index+16] == 1){neighbors++;}
-            if (array[index+17] == 1){neighbors++;}
-            console.log(neighbors);
+            if (array[index-17] != undefined && array[index-17] == 1){neighbors++;}
+            if (array[index-16] != undefined && array[index-16] == 1){neighbors++;}
+            if (array[index-15] != undefined && array[index-15] == 1){neighbors++;}
+            if (array[index-1]  != undefined && array[index-1]  == 1){neighbors++;}
+            if (array[index+1]  != undefined && array[index+1]  == 1){neighbors++;}
+            if (array[index+15] != undefined && array[index+15] == 1){neighbors++;}
+            if (array[index+16] != undefined && array[index+16] == 1){neighbors++;}
+            if (array[index+17] != undefined && array[index+17] == 1){neighbors++;}
             result.push(neighbors);  
     }  
 

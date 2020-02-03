@@ -12,8 +12,8 @@ module.exports = {
 
     createPresetButton(generalArray, buttonName){
         button = document.createElement("a");
-        button.classList.add("panel-button-" + buttonName);
-        button.innerText =  buttonName;
+        button.classList.add("panel-button");
+        button.innerText = buttonName;
         let dishIdNumber = 1;
         
         switch (buttonName) {
@@ -39,6 +39,7 @@ module.exports = {
     createStepButton(generalArray){
         button = document.createElement("a");
         button.id = "step";
+        button.classList.add("panel-button");
         button.innerText =  "Step";
         button.onclick = ()=>{
            alg.evaluateDish(generalArray);
@@ -48,7 +49,22 @@ module.exports = {
         welcome.appendChild(button);        
     },
 
-    createPlayButton(){
-
+    // sleep(milliseconds) {
+    //     return new Promise((resolve) => setTimeout(resolve, milliseconds));
+    // },
+    
+    createPlayButton(generalArray){
+        button = document.createElement("a");
+        button.id = "play-pause";
+        button.classList.add("panel-button");
+        button.innerText =  "▶";
+        // button.onclick = ()=> {
+        //     x = 0;
+        //     while (x < 15){
+        //         setTimeout(() => {  alg.evaluateDish(generalArray); }, 2000);
+        //     }
+        // };
+        let welcome = document.getElementById("welcomePanel");
+        welcome.appendChild(button);
     }
 }

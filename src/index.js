@@ -43,3 +43,4 @@ const panel = require("./js/panel");
         panel.createPresetButton(generalArray, "Tumbler"); //ID: 2
         panel.createPresetButton(generalArray, "Propellors");//ID: 3
         panel.createStepButton(generalArray);
+        panel.createPlayButton(generalArray);

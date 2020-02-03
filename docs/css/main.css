@@ -10,7 +10,6 @@ a {
 a:hover {
   color: #fff;
 }
- 
 
 #cellGrid {
   background: green;
@@ -32,8 +31,9 @@ a:hover {
 
 #gridWrapper {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row;
+  
+  border-radius: 20px;
 
   border: 1px;
   margin: 1px;
@@ -72,6 +72,7 @@ p:nth-child(n):hover {
 
 .panel-button{
   border-radius: 5px;
+  color: black;
 }
 
 #step {
@@ -93,4 +94,9 @@ p:nth-child(n):hover {
   padding: 2px;
   border: 2px;
   margin: 2px;
+}
+
+#welcomePanel > a {
+  width: 100%;
+  text-align: center;
 }
