@@ -20,14 +20,13 @@ module.exports = {
       let element = generalArray[index];
       const cell = document.createElement("p");
       
-      cell.style.background = element === 1 ? 'chartreuse' : 'white';
+      cell.style.background = element === 1 ? 'fuchsia' : 'white';
 
       cell.classList.add("grid-item-" + index);
       cell.id = ("grid-ID-" + index);
       document.getElementById("cellGrid").append(cell);
       
-      cell.addEventListener("load", 
-                            onUserClick.updateColorAndArray(cell, element, generalArray));
+      cell.addEventListener("load", onUserClick.updateColorAndArray(cell, element, generalArray));
     }
     return generalArray;
   },

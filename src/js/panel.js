@@ -1,5 +1,6 @@
 const renderCellsFromAPI = require("./renderCellsFromAPI");
 const alg = require("./algorithm");
+const randomCells = require("./random");
 
 module.exports = {
 
@@ -15,6 +16,13 @@ module.exports = {
         welcome.appendChild(presetHeading);
     },
 
+    createPresetWrapper(){
+        const welcome = document.getElementById("welcomePanel");
+        const presetWrapper = document.createElement("wrapper");
+        presetWrapper.id = "preset-wrapper"; 
+        welcome.appendChild(presetWrapper);
+    },
+
     createPresetButton(generalArray, buttonName){
         button = document.createElement("a");
         button.classList.add("panel-button");
@@ -22,16 +30,27 @@ module.exports = {
         let dishIdNumber = 1;
         
         switch (buttonName) {
-            case "Blank":       dishIdNumber = 0; break;
-            case "Propellors":  dishIdNumber = 1; break;
-            case "Tumbler":     dishIdNumber = 2; break;
+            case "Blank":       dishIdNumber = 0;       break;
+            case "Propellors":  dishIdNumber = 1;       break;
+            case "Tumbler":     dishIdNumber = 2;       break;
             default: break;
         }    
-            let welcome = document.getElementById("welcomePanel");
+            const presetWrapper = document.getElementById("preset-wrapper");
             button.onclick = () =>{
                 renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber);
             }
-            welcome.appendChild(button);
+            presetWrapper.appendChild(button);
+    },
+
+    createRandomButton(generalArray){
+        button = document.createElement("a");
+        button.classList.add("panel-button");
+        button.innerText = 'Random';
+        button.onclick = () => {
+            randomCells.renderWithRandomCells(generalArray);
+        }
+        const presetWrapper = document.getElementById("preset-wrapper");
+        presetWrapper.appendChild(button);
     },
 
     createStepHeading(){

@@ -77,6 +77,7 @@ p:nth-child(n):hover {
 .panel-button{
   border-radius: 5px;
   color: black;
+  text-align: center;
   width: 100%;
 }
 
@@ -89,8 +90,13 @@ p:nth-child(n):hover {
   border: none;
 }
 
+#preset-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 #step {
-  background: gray;
   color: blue;
   text-align: center;
   width: 100%;
