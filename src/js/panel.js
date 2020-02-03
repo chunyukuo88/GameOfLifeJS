@@ -1,5 +1,5 @@
 const renderCellsFromAPI = require("./renderCellsFromAPI");
-const alg = require("./algorithm");
+const algorithm = require("./algorithm");
 const randomCells = require("./random");
 
 module.exports = {
@@ -76,7 +76,7 @@ module.exports = {
         button.classList.add("panel-button");
         button.innerText =  "Step";
         button.onclick = ()=>{
-           alg.evaluateDish(generalArray);
+            algorithm.evaluateDish(generalArray);
            return generalArray;
         };
         const stepWrapper = document.getElementById("step-wrapper");
@@ -88,14 +88,12 @@ module.exports = {
     },
 
     async playIndefinitely(generalArray){
-        alg.evaluateDish(generalArray);
-        await this.sleep(1000);
-        alg.evaluateDish(generalArray);
-        await this.sleep(1000);
-        alg.evaluateDish(generalArray);
-        await this.sleep(1000);
-        alg.evaluateDish(generalArray);
-        await this.sleep(1000);
+        algorithm.evaluateDish(generalArray);
+        await this.sleep(100);
+        algorithm.evaluateDish(generalArray);
+        await this.sleep(100);
+        algorithm.evaluateDish(generalArray);
+        await this.sleep(100);
     },
 
     createPlayButton(generalArray){

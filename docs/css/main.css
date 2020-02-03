@@ -71,15 +71,22 @@ p:nth-child(n) {
 p:nth-child(n):hover {
   border: 1px solid green;
   background: gray;
-  rotate: 135deg;
+  rotate: 180deg;
 }
 
 .panel-button{
   border-radius: 5px;
+  box-shadow: 0 9px 9px rgb(1, 70, 1);
   color: black;
   text-align: center;
   width: 100%;
 }
+
+.panel-button:active {
+  box-shadow: 0 5px 5px rgb(1, 70, 1);
+  transform: translateY(4px);
+}
+
 
 #play-pause {
   text-align: center;
@@ -106,16 +113,17 @@ p:nth-child(n):hover {
   background: fuchsia;
 }
 
+
+#step-heading{
+  background: none;
+  border: none;
+}
+
 #step-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-}
-
-#step-heading{
-  background: none;
-  border: none;
 }
 
 #welcomePanel {
