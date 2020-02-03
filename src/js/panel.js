@@ -64,22 +64,31 @@ module.exports = {
         stepWrapper.appendChild(button);        
     },
 
-    // sleep(milliseconds) {
-    //     return new Promise((resolve) => setTimeout(resolve, milliseconds));
-    // },
-    
+    sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    },
+
+    async playIndefinitely(generalArray){
+        alg.evaluateDish(generalArray);
+        await this.sleep(1000);
+        alg.evaluateDish(generalArray);
+        await this.sleep(1000);
+        alg.evaluateDish(generalArray);
+        await this.sleep(1000);
+        alg.evaluateDish(generalArray);
+        await this.sleep(1000);
+    },
+
     createPlayButton(generalArray){
         button = document.createElement("a");
         button.id = "play-pause";
         button.classList.add("panel-button");
         button.innerText =  "▶";
-        // button.onclick = ()=> {
-        //     x = 0;
-        //     while (x < 15){
-        //         setTimeout(() => {  alg.evaluateDish(generalArray); }, 2000);
-        //     }
-        // };
+        button.onclick = ()=> {
+            this.playIndefinitely(generalArray);
+        };
         const stepWrapper = document.getElementById("step-wrapper");
         stepWrapper.appendChild(button);   
-    }
+    },
+
 }
