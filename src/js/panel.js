@@ -8,6 +8,11 @@ module.exports = {
         welcome.id = "welcomePanel";
         let wrapper = document.getElementById("gridWrapper");
         wrapper.append(welcome);
+
+        const presetHeading = document.createElement("a");
+        presetHeading.id = "preset-heading";
+        presetHeading.innerText = "Preset Patterns:"
+        welcome.appendChild(presetHeading);
     },
 
     createPresetButton(generalArray, buttonName){
@@ -17,23 +22,33 @@ module.exports = {
         let dishIdNumber = 1;
         
         switch (buttonName) {
-            case "Blank":
-                dishIdNumber = 0;
-                break;
-            case "Propellors":
-                dishIdNumber = 1;
-                break;
-            case "Tumbler":
-                dishIdNumber = 2;
-                break;
-            default:
-                break;
+            case "Blank":       dishIdNumber = 0; break;
+            case "Propellors":  dishIdNumber = 1; break;
+            case "Tumbler":     dishIdNumber = 2; break;
+            default: break;
         }    
             let welcome = document.getElementById("welcomePanel");
             button.onclick = () =>{
                 renderCellsFromAPI.updateBasedOnAPI(generalArray, dishIdNumber);
             }
             welcome.appendChild(button);
+    },
+
+    createStepHeading(){
+        const stepHeading = document.createElement("a");
+        stepHeading.id = "step-heading";
+        stepHeading.innerText = "\nGive it a whirl!"
+
+        const welcome = document.getElementById("welcomePanel");
+        welcome.appendChild(stepHeading);
+    },
+
+    createStepWrapper(){
+        const stepWrapper = document.createElement("wrapper");
+        stepWrapper.id = "step-wrapper";
+        
+        const welcome = document.getElementById("welcomePanel");
+        welcome.appendChild(stepWrapper);   
     },
 
     createStepButton(generalArray){
@@ -45,8 +60,8 @@ module.exports = {
            alg.evaluateDish(generalArray);
            return generalArray;
         };
-        let welcome = document.getElementById("welcomePanel");
-        welcome.appendChild(button);        
+        const stepWrapper = document.getElementById("step-wrapper");
+        stepWrapper.appendChild(button);        
     },
 
     // sleep(milliseconds) {
@@ -64,7 +79,7 @@ module.exports = {
         //         setTimeout(() => {  alg.evaluateDish(generalArray); }, 2000);
         //     }
         // };
-        let welcome = document.getElementById("welcomePanel");
-        welcome.appendChild(button);
+        const stepWrapper = document.getElementById("step-wrapper");
+        stepWrapper.appendChild(button);   
     }
 }

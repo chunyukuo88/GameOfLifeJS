@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
 
 a {
+  background-color: rgb(167, 255, 95);
   border: 2px solid chartreuse;
   border-radius: 2px;
   margin: 1px;
@@ -8,6 +9,7 @@ a {
 }
 
 a:hover {
+  background-color: fuchsia;
   color: #fff;
 }
 
@@ -32,7 +34,7 @@ a:hover {
 #gridWrapper {
   display: flex;
   flex-direction: row;
-  
+
   border-radius: 20px;
 
   border: 1px;
@@ -41,6 +43,8 @@ a:hover {
 }
 
 h1 {
+  background: rgb(167, 255, 95);
+  color: blue;
   text-align: center;
   transition: 1s;
 }
@@ -73,18 +77,46 @@ p:nth-child(n):hover {
 .panel-button{
   border-radius: 5px;
   color: black;
+  width: 100%;
+}
+
+#play-pause {
+  text-align: center;
+}
+
+#preset-heading {
+  background: none;
+  border: none;
 }
 
 #step {
   background: gray;
   color: blue;
+  text-align: center;
+  width: 100%;
+}
+
+#step:hover {
+  background: fuchsia;
+}
+
+#step-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#step-heading{
+  background: none;
+  border: none;
 }
 
 #welcomePanel {
   background: green;
   border-radius: 5px;
-  height: 160px;
-  width: 120px;
+  height: 100%;
+  width: 100%;
   
   display: flex;
   flex-direction: column;
