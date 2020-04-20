@@ -5,8 +5,11 @@ import { TodoForm } from './TodoForm';
 
 function App() {
   const [todos, setTodos] = useState([
-    {text: 'Learn about React.', isCompleted: false},
-    {text: 'Master SSH.', isCompleted: false}
+    {text: '烤麵包.', isCompleted: false},
+    {text: '溫習SSH.', isCompleted: false},
+    {text: '複習JEST測試方法.', isCompleted: false},
+    {text: '搞定報稅表.', isCompleted: false},
+    {text: '開始摺新的薬玉.', isCompleted: false},
   ]);
 
   const addTodo = text => {
