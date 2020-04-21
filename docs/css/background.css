@@ -1,9 +1,0 @@
-body {
-    backdrop-filter: blur(10px);
-    background: url("../images/bacteria.jpg") no-repeat;
-    /*This next command keeps the inherited background full-sized*/
-    background-attachment: fixed;
-    background-size: cover;
-    color: yellow;
-    font-family: 'Acme', sans-serif;
-  }
