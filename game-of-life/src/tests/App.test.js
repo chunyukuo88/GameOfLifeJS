@@ -1,16 +1,15 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from '../App';
-import Grid from '../Grid';
+import { total } from '../App';
+import { add } from '../add';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/Alex/i);
-  expect(linkElement).toBeInTheDocument();
-});
+jest.mock('../add', () => ({
+  add: jest.fn(() => 25)
+}));
 
-test('renders grid', ()=> {
-  const { getByText } = render(<Grid />);
-  const gridElement = getByText([0,0,0]);
-  expect(gridElement).toBeInTheDocument();
+test('total', () => {
+  expect(total(5, 20)).toBe('$25');
+  expect(add(1,2)).toBe(25);
+
+  add.mockImplementation(() => 30);
+  expect(add(1,2)).toBe(30);
+  expect(add).toHaveBeenCalledTimes(3);
 });

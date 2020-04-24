@@ -1,14 +1,5 @@
-import React from 'react';
-import './App.css';
-import { Grid } from './Grid';
+import { add } from './add';
 
-function App() {
-  return (
-    <div>
-      <h1>Alex's Game of Life</h1>
-      
-    </div>
-  );
+export const total = (shipping, subTotal) => {
+  return '$' + add(shipping, subTotal);
 }
-//<Grid />
-export default App;
