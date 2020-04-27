@@ -4,7 +4,7 @@ function Grid() {
   return (
     <section className="grid-wrapper">
         <p>
-            [[0,0,0],[0,0,0],[0,0,0]]
+            [[0,0],[0,0]]
         </p>
     </section>
   );
