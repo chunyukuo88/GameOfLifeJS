@@ -1,46 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Todo } from './Todo';
-import { TodoForm } from './TodoForm';
+import Grid from './Grid';
+import MathFact from './MathFact';
 
 function App() {
-  const [todos, setTodos] = useState([
-    {text: 'Learn about React.', isCompleted: false},
-    {text: 'Master SSH.', isCompleted: false}
-  ]);
+  const [count, setCount] = useState(0);
 
-  const addTodo = text => {
-    const newTodos = [...todos, { text }];
-    setTodos(newTodos);
-  };
-
-  const completeTodo = index => {
-    const newTodos = [...todos];
-    newTodos[index].isCompleted = true;
-    setTodos(newTodos);
-  };
-
-  const removeTodo = index => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
-  };
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
 
   return (
-    <div className="app">
-      <div className="todo-list">
-        {todos.map((todo, index) => (
-          <Todo key={index}
-                index={index}
-                todo={todo}
-                completeTodo={completeTodo}
-                removeTodo={removeTodo}
-          />
-        ))}
-      </div>
-      <TodoForm addTodo={ addTodo } />
+    <div>
+      <h1>Chunyu Kuo's Site</h1>
+      <Grid />
+      <MathFact />
+      <p>You clicked {count} times.</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
     </div>
-    );
-};
+  );
+}
 
 export default App;
