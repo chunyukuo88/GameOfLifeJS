@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import Grid from './Grid';
-import MathFact from './MathFact';
+import MathFact from './mathFact';
+import useCountInput from './hooks/useCountInput';
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
 
-  useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
+  const [count, setCount] = useCountInput(0);
 
   return (
     <div>
