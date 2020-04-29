@@ -12,11 +12,16 @@ const App = () => {
     <div>
       <h1>Chunyu Kuo's Site</h1>
       <Grid />
-      <MathFact />
-      <p>You clicked {count} times.</p>
       <button onClick={() => setCount(count + 1)}>
-        Click me
+        Count up!
       </button>
+      <button onClick={() => setCount(count - 1)}>
+        Count down!
+      </button>
+      <p>Now click below for a fun fact about the number {count}:</p>
+      {/* <button onClick={() => MathFact(count)}>
+        Click!
+      </button> */}
     </div>
   );
 }

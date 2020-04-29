@@ -4,7 +4,7 @@ function useCountInput(integer){
     const [count, setCount] = useState(integer);
   
     useEffect(() => {
-      document.title = `You clicked ${count} times`;
+      document.title = `Pondering the number ${count}`;
     });
   
     return [count, setCount];
