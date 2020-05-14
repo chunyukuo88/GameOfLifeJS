@@ -1,4 +1,4 @@
-import MathFact from './mathFact';
+import MathFact from '../mathFact';
 
 describe('MathFact.js', ()=> {
     describe('When given a valid integer, ', ()=>{

@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Grid from './Grid';
-import MathFact from './mathFact';
+// import MathFact from './mathFact';
 import useCountInput from './hooks/useCountInput';
 
 const App = () => {
 
   const [count, setCount] = useCountInput(0);
+  const ref = useRef();
 
   return (
-    <div>
-      <h1>Chunyu Kuo's Site</h1>
+    <div className='App-wrapper' ref={ref}>
+      <h1 onClick={() => console.log(ref.current.className)}>Chunyu Kuo's Site</h1>
       <Grid />
-      <button onClick={() => setCount(count + 1)}>
+      <button className='count-up'
+              onClick={() => setCount(count + 1)}
+      >
         Count up!
       </button>
-      <button onClick={() => setCount(count - 1)}>
+      <button className='count-down' 
+              onClick={() => setCount(count - 1)}
+      >
         Count down!
       </button>
-      <p>Now click below for a fun fact about the number {count}:</p>
-      {/* <button onClick={() => MathFact(count)}>
-        Click!
-      </button> */}
+      <p><span>Now click below for a fun fact about the number</span><span>{count}:</span></p>
+      
     </div>
   );
 }
+
+/* <button onClick={() => MathFact(count)}>
+        Click!
+      </button> */
 
 export default App;
