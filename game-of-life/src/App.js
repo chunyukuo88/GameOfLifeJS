@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './App.css';
 import Grid from './Grid';
-// import MathFact from './mathFact';
+import MathFact from './mathFact';
 import useCountInput from './hooks/useCountInput';
 
 const App = () => {
@@ -23,14 +23,14 @@ const App = () => {
       >
         Count down!
       </button>
-      <p><span>Now click below for a fun fact about the number</span><span>{count}:</span></p>
+      <p><span>Now here is a fun fact about the number</span><span>{count}:</span></p>
       
+<button onClick={() => MathFact(count)}>
+        Click!
+      </button>
     </div>
   );
 }
 
-/* <button onClick={() => MathFact(count)}>
-        Click!
-      </button> */
 
 export default App;

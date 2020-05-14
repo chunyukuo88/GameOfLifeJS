@@ -11,7 +11,7 @@ describe('App.js -- Rendering strings, arrays and imported modules.', ()=>{
   });
   test('Renders fun fact header', () => {
     const { getByText } = render(<App />);
-    const funFactHeader = getByText('Now click below for a fun fact about the number');
+    const funFactHeader = getByText('Now here is a fun fact about the number');
     expect(funFactHeader).toBeInTheDocument();
   });
   test('Renders grid', ()=>{
