@@ -19,7 +19,7 @@ describe('App.js -- Rendering strings, arrays and imported modules.', ()=>{
     const  gridElement = getByText('[[0,0],[0,0]]');
     expect(gridElement).toBeInTheDocument();
   });
-  test.skip('Renders math fact', async ()=>{
+  test('Renders math fact', async ()=>{
     const { getByText } = render(<App />);
     const mathFact = await getByText('0 is the additive identity.');
     expect(mathFact).toBeInTheDocument();

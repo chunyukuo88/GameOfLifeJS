@@ -24,8 +24,8 @@ const App = () => {
         Count down!
       </button>
       <p><span>Now here is a fun fact about the number</span><span>{count}:</span></p>
-      
-<button onClick={() => MathFact(count)}>
+
+      <button onClick={() => MathFact(count)}>
         Click!
       </button>
     </div>
