@@ -21,8 +21,8 @@ describe('App.js -- Rendering strings, arrays and imported modules.', ()=>{
   });
   test('Renders math fact', async ()=>{
     const { getByText } = render(<App />);
-    const mathFact = await getByText('0 is the additive identity.');
-    expect(mathFact).toBeInTheDocument();
+    const MathFact = await getByText('0 is the additive identity.');
+    expect(MathFact).toBeInTheDocument();
   });
 
 });
