@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-const MathFact = (integer) => {
+const MathFact = (integerAsObject) => {
+    const count = JSON.stringify(integerAsObject.count);
+    console.log(`Here is what was given to MathFact: ${count}`)
     const [fact, setFact] = useState('Want facts? Get clicking!');
-    const url = `http://numbersapi.com/${integer}/math`;
+    const url = `http://numbersapi.com/${count}/math`;
     const options = { method: "GET", headers: { "Content-type": "text/plain" }};
-
     
     useEffect(() => {
         const getFact = async () => { 
             const result = await fetch(url, options).then(res => res.text());
             setFact(result);
-            console.log(fact);
          };
         getFact();
      },[url, options, fact]);

@@ -25,7 +25,7 @@ const App = () => {
       </button>
       <p><span>Now here is a fun fact about the number </span><span>{count}:</span></p>
 
-      <MathFact {...count} />
+      <MathFact count={count} />
     </div>
   );
 }
