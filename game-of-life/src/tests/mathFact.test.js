@@ -8,7 +8,7 @@ describe('mathFact.js', ()=> {
             expect(output).toBe(expectedResult);
         });
     });
-    describe.skip('When given an invalid integer, ', ()=>{
+    describe('When given an invalid integer, ', ()=>{
         test('returns an error string', async ()=>{
             const output = await MathFact('chuck norris');
             expect(output.includes('Cannot GET')).toBeTruthy();        });

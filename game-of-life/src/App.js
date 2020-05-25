@@ -18,6 +18,7 @@ const App = () => {
       >
         Count up!
       </button>
+      <input type="integer" onChange={(e) => setCount(e.target.value)} value={count}/>
       <button className='count-down' 
               onClick={() => setCount(count - 1)}
       >
@@ -29,6 +30,5 @@ const App = () => {
     </div>
   );
 }
-
 
 export default App;
