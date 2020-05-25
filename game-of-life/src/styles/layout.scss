@@ -1,13 +1,38 @@
 .App-wrapper{
-    display: grid;
-    height: 100%;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(13, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(8, 12.5vw);
+  grid-template-rows: repeat(13, 7.7vh);
 }
 
-.component {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.upper-left{
+  border: 4px solid purple;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+}
+
+.upper-right{
+  border: 4px solid purple;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+}
+
+.lower-half{
+  border: 4px solid purple;
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 5;
+  grid-row-end: 13;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
 }
