@@ -1,0 +1,13 @@
+.App-wrapper{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: 20px;
+}
+
+.component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import './input.css';
+import './styles/input.css';
+import './styles/layout.css';
 import MathFact from './MathFact';
 import useCountInput from './hooks/useCountInput';
 
