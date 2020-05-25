@@ -13,18 +13,17 @@ const App = () => {
     <div className='App-wrapper' ref={ref}>
 
         <section className='upper-left'>
-          <h1 className='page-title' onClick={() => console.log(ref.current.className)}>Chunyu Kuo's Splendid Maths</h1>
+          <h1 className='page-title' onClick={() => console.log(ref.current.className)}>The Splendid Maths</h1>
         </section>
 
-        <section className='upper-right'>
-          <div className='burger'>
-            Replace with hamburger element
-          </div>
-          <section className='switch-section'>
-            <p className='localization'>Localization</p>
-          </section>
+        <section className='upper-right-a'>
+          <p className='localization'>By Alex Gochenour</p>
         </section>
 
+        <section className='upper-right-b'>
+          <span>中文</span>
+          <span>English</span>
+        </section>
 
         <section className='lower-half'>
           <button className='count-up'

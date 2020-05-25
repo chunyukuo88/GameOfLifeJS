@@ -9,6 +9,15 @@
 
 .upper-left {
   border: 4px solid purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 5;
@@ -20,10 +29,45 @@
   padding: 5px;
 }
 
-.upper-right {
+.upper-right-a {
   border: 4px solid purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-column: 5;
       grid-column-start: 5;
+  grid-column-end: 7;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 5;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+}
+
+.upper-right-b {
+  border: 4px solid purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 7;
+      grid-column-start: 7;
   grid-column-end: 8;
   -ms-grid-row: 1;
       grid-row-start: 1;
@@ -35,14 +79,26 @@
 
 .lower-half {
   border: 4px solid purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 8;
   -ms-grid-row: 5;
       grid-row-start: 5;
   grid-row-end: 13;
-  height: auto;
   margin: 5px;
   padding: 5px;
+}
+
+.page-title {
+  font-family: 'Kanit', sans-serif;
 }
 /*# sourceMappingURL=layout.css.map */
