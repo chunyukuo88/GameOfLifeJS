@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import './App.css';
-import Grid from './Grid';
 import MathFact from './MathFact';
 import useCountInput from './hooks/useCountInput';
 
@@ -12,18 +11,7 @@ const App = () => {
   return (
     <div className='App-wrapper' ref={ref}>
       <h1 onClick={() => console.log(ref.current.className)}>Chunyu Kuo's Site</h1>
-      <Grid />
-      <button className='count-up'
-              onClick={() => setCount(count + 1)}
-      >
-        Count up!
-      </button>
-      <input type="integer" onChange={(e) => setCount(e.target.value)} value={count}/>
-      <button className='count-down' 
-              onClick={() => setCount(count - 1)}
-      >
-        Count down!
-      </button>
+      <input type="number" onChange={(e) => setCount(e.target.value)} value={count}/>
       <p><span>Now here is a fun fact about the number </span><span>{count}:</span></p>
 
       <MathFact count={count} />
