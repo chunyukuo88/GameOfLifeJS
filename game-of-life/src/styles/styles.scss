@@ -18,6 +18,19 @@ $default-padding: 5px;
   }
 }
 
+button {
+  background-color: green;
+  color: white;
+  font-weight: 900;
+  
+  margin: 0;
+  padding: 0;
+
+  & :hover{
+    background-color: blue;
+  }
+}
+
 .count-up,
 .count-down{
   margin: $default-margin;
@@ -25,7 +38,6 @@ $default-padding: 5px;
 }
 
 .entry-section{
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: $default-margin;
@@ -42,12 +54,15 @@ $default-padding: 5px;
   padding: $default-padding;
 }
 
-.fact-section{
-  margin: $default-margin;
-  padding: $default-padding;
+html{
+  width: 100%;
+  height: 100%;
+  overflow-x:hidden;
 }
 
 .integer-input-box{
+  margin: 0;
+  padding: 0;
   width: 50px;
 }
 
@@ -65,6 +80,10 @@ $default-padding: 5px;
   
   margin: $default-margin;
   padding: $default-padding;
+}
+
+.page-title{
+  transform: rotate(-15deg);
 }
 
 .upper-left{

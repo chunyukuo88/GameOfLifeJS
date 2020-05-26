@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './styles/input.css';
-import './styles/layout.css';
+import './styles/styles.css';
 import MathFact from './MathFact';
 import useCountInput from './hooks/useCountInput';
 
@@ -17,7 +17,8 @@ const App = () => {
         </section>
 
         <section className='upper-right-a'>
-          <p className='localization'>By Alex Gochenour</p>
+          <span className='byline-a'>By Chunyu Kuo</span>
+          <span className='byline-b'>Inspired by John Conway</span>
         </section>
 
         <section className='upper-right-b'>

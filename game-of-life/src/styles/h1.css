@@ -1,0 +1,111 @@
+.page-title {
+  z-index: -1;
+  top: 800px;
+  left: 0;
+  background-size: cover;
+}
+
+.page-title #button {
+  width: 122px;
+  padding: 16px;
+  height: 50px;
+  color: #f6f6f6;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: transparent;
+  -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px #fff;
+          box-shadow: 0px 0px 0px #fff;
+  z-index: 0;
+}
+
+.page-title #button .ring {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50px;
+  top: 40%;
+  left: 45%;
+  -webkit-transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transform: perspective(500px) translate3d(0px, 0px, 0px);
+          transform: perspective(500px) translate3d(0px, 0px, 0px);
+  opacity: 0.0;
+}
+
+.page-title #button:hover .one {
+  -webkit-transform: perspective(500px) translate3d(-90px, -50px, 150px);
+          transform: perspective(500px) translate3d(-90px, -50px, 150px);
+  opacity: 1;
+}
+
+.page-title #button:hover .two {
+  -webkit-transform: perspective(800px) translate3d(-130px, 50px, 180px);
+          transform: perspective(800px) translate3d(-130px, 50px, 180px);
+  opacity: 0.6;
+}
+
+.page-title #button:hover .three {
+  -webkit-transform: perspective(800px) translate3d(130px, 50px, 30px);
+          transform: perspective(800px) translate3d(130px, 50px, 30px);
+  opacity: 0.2;
+}
+
+.page-title #button:hover .four {
+  -webkit-transform: perspective(800px) translate3d(130px, -120px, 80px);
+          transform: perspective(800px) translate3d(130px, -120px, 80px);
+  opacity: 0.9;
+}
+
+.page-title #button::after {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  content: "";
+  background: #fff;
+  z-index: -1;
+  -webkit-transform: perspective(800px) scale(0) rotate(0deg);
+          transform: perspective(800px) scale(0) rotate(0deg);
+  -webkit-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.page-title #button:before {
+  position: absolute;
+  top: -40px;
+  left: -6px;
+  width: 160px;
+  height: 160px;
+  border: solid 1px #fff;
+  content: "";
+  background: transparent;
+  z-index: -1;
+  -webkit-transform: perspective(800px) scale(0.4) rotate(0deg);
+          transform: perspective(800px) scale(0.4) rotate(0deg);
+  -webkit-transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.page-title #button:hover::after {
+  -webkit-transform: perspective(800px) scale(1) rotate(600deg);
+          transform: perspective(800px) scale(1) rotate(600deg);
+}
+
+.page-title #button:hover::before {
+  -webkit-transform: perspective(800px) scale(1) rotate(-100deg);
+          transform: perspective(800px) scale(1) rotate(-100deg);
+}
+
+.page-title #button:hover {
+  color: #505050;
+}
+/*# sourceMappingURL=h1.css.map */
