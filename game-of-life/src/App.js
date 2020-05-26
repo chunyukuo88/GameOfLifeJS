@@ -21,24 +21,29 @@ const App = () => {
         </section>
 
         <section className='upper-right-b'>
-          <span>中文</span>
+          <span className='華語版本'>華語版本</span>
           <span>English</span>
         </section>
 
         <section className='lower-half'>
-          <button className='count-up'
-                  onClick={() => setCount(count + 1)}
-          >
-            Count up!
-          </button>
-          <input type="number" onChange={(e) => setCount(e.target.value)} value={count}/>
-          <button className='count-down' 
-                  onClick={() => setCount(count - 1)}
-          >
-            Count down!
-          </button>
-          <p><span>Now here is a fun fact about the number </span><span>{count}:</span></p>
-          <MathFact count={count} />
+            <section className='entry-section'>
+                <button className='count-up'
+                        onClick={() => setCount(count + 1)}
+                >
+                  ⇧
+                </button>
+                <input className='integer-input-box' type="number" onChange={(e) => setCount(e.target.value)} value={count}/>
+                <button className='count-down' 
+                        onClick={() => setCount(count - 1)}
+                >
+                  ⇩
+                </button>
+            </section>
+
+            <section className='fact-section'>
+              <p className='fact-label'><span>Now here is a fun fact about the number </span><span>{count}:</span></p>
+              <MathFact count={count} />
+            </section>
         </section>
     </div>
   );
