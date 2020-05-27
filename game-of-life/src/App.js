@@ -17,7 +17,7 @@ const App = () => {
         <section className='lower-half'>
             <section className='entry-section'>
                 <button className='count-up'   onClick={() => setCount(count + 1)}>⇧</button>
-                <input  className='integer-input-box' type="number" onChange={(e) => setCount(e.target.value)} value={count}/>
+                <input  className='integer-input-box' type="number" onChange={(e) => setCount(parseInt(e.target.value, 10))} value={count}/>
                 <button className='count-down' onClick={() => setCount(count - 1)}>⇩</button>
             </section>
 
