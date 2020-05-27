@@ -10,4 +10,4 @@ function useCountInput(integer){
     return [count, setCount];
   }
 
-  export default useCountInput;
+export default useCountInput;
