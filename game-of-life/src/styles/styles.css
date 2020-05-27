@@ -14,8 +14,6 @@
 
 .App-wrapper :hover {
   background-color: #cece18;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 button {
@@ -76,6 +74,7 @@ html {
 }
 
 .lower-half {
+  background-color: #eed9ba;
   border: 4px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,9 +98,23 @@ html {
 .page-title {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.page-title:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#root {
+  background-color: #7b7bec;
 }
 
 .upper-left {
+  background-color: #f18a61;
   border: 4px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,6 +137,7 @@ html {
 }
 
 .upper-right-a {
+  background-color: #eed9ba;
   border: 4px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,6 +160,7 @@ html {
 }
 
 .upper-right-b {
+  background-color: #f18a61;
   border: 4px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
