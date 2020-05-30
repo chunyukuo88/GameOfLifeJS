@@ -13,7 +13,6 @@ const MathFact = (integerAsObject) => {
          };
         getFact();
      },[url, options, fact]);
-
     return (
         <div>
             <p>{fact}</p>

@@ -6,7 +6,7 @@ import UpperHalf from './UpperHalf';
 import useCountInput from './hooks/useCountInput';
 
 const App = () => {
-  const initialCount = 0
+  const initialCount = Math.floor(Math.random() * 101);
   const [count, setCount] = useCountInput(initialCount);
 
   return (
