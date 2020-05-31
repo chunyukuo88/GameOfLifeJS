@@ -8,8 +8,8 @@ const UpperHalf = () => {
         </section>
 
         <section className='upper-right-a'>
-          <span className='byline a'>By Chunyu Kuo</span>
-          <span className='byline b'>Inspired by John Conway</span>
+          <span className='byline a'>Made by <br/>Chunyu Kuo</span>
+          <span className='byline b'>Inspired by <br/>John Conway</span>
         </section>
 
         <section className='upper-right-b'>

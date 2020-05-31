@@ -10,7 +10,7 @@ const App = () => {
   const [count, setCount] = useCountInput(initialCount);
 
   return (
-    <div className='App-wrapper' >
+    <div className='App-wrapper'>
 
         <UpperHalf />
         <section className='lower-half'>
