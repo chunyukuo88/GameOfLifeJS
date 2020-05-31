@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles/input.css';
 import './styles/styles.css';
-import MathFact from './MathFact';
 import UpperHalf from './UpperHalf';
+import MathFact from './MathFact';
 import useCountInput from './hooks/useCountInput';
 
 const App = () => {
@@ -13,7 +13,6 @@ const App = () => {
     <div className='App-wrapper' >
 
         <UpperHalf />
-
         <section className='lower-half'>
             <section className='entry-section'>
                 <button className='count-up'   onClick={() => setCount(count + 1)}>⇧</button>

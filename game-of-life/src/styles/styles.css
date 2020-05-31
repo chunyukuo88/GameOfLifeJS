@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
-  font-family: 'Kanit', sans-serif;
+  background-color: #7b7bec;
+  font-family: 'Nova Mono', monospace;
 }
 
 .App-wrapper {
@@ -24,8 +25,8 @@ button {
   padding: 0;
 }
 
-button :hover {
-  background-color: blue;
+.byline {
+  background-color: inherit;
 }
 
 .count-up,
@@ -34,7 +35,17 @@ button :hover {
   padding: 5px;
 }
 
+.count-up :hover,
+.count-down :hover {
+  background-color: blue;
+}
+
+.english {
+  background-color: inherit;
+}
+
 .entry-section {
+  background-color: inherit;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -43,7 +54,12 @@ button :hover {
   padding: 5px;
 }
 
+.fact-label {
+  background-color: inherit;
+}
+
 .fact-section {
+  background-color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,6 +75,10 @@ button :hover {
           align-items: center;
   margin: 5px;
   padding: 5px;
+}
+
+p {
+  background-color: inherit;
 }
 
 html {
@@ -96,6 +116,7 @@ html {
 }
 
 .page-title {
+  background-color: inherit;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   -webkit-transition: -webkit-transform .2s;
@@ -111,6 +132,10 @@ html {
 
 #root {
   background-color: #7b7bec;
+}
+
+span {
+  background-color: inherit;
 }
 
 .upper-left {
@@ -187,6 +212,7 @@ html {
 }
 
 .華語版本 {
+  background-color: inherit;
   font-family: 'ZCOOL XiaoWei', serif;
 }
 /*# sourceMappingURL=styles.css.map */

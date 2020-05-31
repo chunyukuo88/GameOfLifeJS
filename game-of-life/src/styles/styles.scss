@@ -8,7 +8,8 @@ $default-margin: 5px;
 $default-padding: 5px;
 
 *{
-  font-family: 'Kanit', sans-serif;
+  background-color: $background;
+  font-family: 'Nova Mono', monospace;
 }
 
 .App-wrapper{
@@ -28,26 +29,40 @@ button {
   
   margin: 0;
   padding: 0;
+}
 
-  & :hover{
-    background-color: blue;
-  }
+.byline {
+  background-color: inherit;
 }
 
 .count-up,
 .count-down{
   margin: $default-margin;
   padding: $default-padding;
+
+  & :hover{
+    background-color: blue;
+  }
+}
+
+.english{
+  background-color: inherit;
 }
 
 .entry-section{
+  background-color: inherit;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: $default-margin;
   padding: $default-padding;
 }
 
+.fact-label{
+  background-color: inherit;
+}
+
 .fact-section{
+  background-color: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,6 +70,10 @@ button {
 
   margin: $default-margin;
   padding: $default-padding;
+}
+
+p{
+  background-color: inherit;
 }
 
 html{
@@ -87,6 +106,7 @@ html{
 }
 
 .page-title{
+  background-color: inherit;
   transform: rotate(-15deg);
   transition: transform .2s;
 }
@@ -97,6 +117,10 @@ html{
 
 #root{
   background-color: $background;
+}
+
+span{
+  background-color: inherit;
 }
 
 .upper-left{
@@ -156,5 +180,6 @@ html{
 }
 
 .華語版本{
+  background-color: inherit;
   font-family: 'ZCOOL XiaoWei', serif;
 }

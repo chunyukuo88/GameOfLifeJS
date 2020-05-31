@@ -8,13 +8,13 @@ const UpperHalf = () => {
         </section>
 
         <section className='upper-right-a'>
-          <span className='byline-a'>By Chunyu Kuo</span>
-          <span className='byline-b'>Inspired by John Conway</span>
+          <span className='byline a'>By Chunyu Kuo</span>
+          <span className='byline b'>Inspired by John Conway</span>
         </section>
 
         <section className='upper-right-b'>
           <span className='華語版本'>華語版本</span>
-          <span>English</span>
+          <span className='english'>English</span>
         </section>
       </React.Fragment>
     );
