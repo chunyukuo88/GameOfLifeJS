@@ -15,10 +15,14 @@ const MathFact = (integerAsObject) => {
      },[url, options, fact]);
     return (
         <React.Fragment>
-            <p className="fetched-fact">{fact}</p>
+            <p className="fetched-fact">{fetchedMatchesInteger(count, fact) === true ? fact : "Loading fact..."}</p>
         </React.Fragment>
     );
+};
 
+const fetchedMatchesInteger = (integer, fact) => {
+    const integerFromFact = fact.split(' ')[0];
+    return (integer == integerFromFact);
 };
 
 export default MathFact;

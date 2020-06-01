@@ -13,7 +13,7 @@ const UpperHalf = () => {
         </section>
 
         <section className='upper-right-b'>
-          <span className='華語版本'>華語版本</span>
+          <span className='華語版本'>換成中文</span>
           <span className='english'>English</span>
         </section>
       </React.Fragment>

@@ -13,14 +13,6 @@
       grid-template-rows: repeat(13, 7.7vh);
 }
 
-button {
-  background-color: green;
-  color: white;
-  font-weight: 900;
-  margin: 0;
-  padding: 0;
-}
-
 .byline {
   background-color: inherit;
 }
@@ -29,15 +21,22 @@ button {
   text-align: right;
 }
 
-.count-up,
 .count-down {
+  -webkit-clip-path: polygon(100% 50%, 80% 50%, 80% 0, 20% 0, 20% 50%, 0 50%, 48% 100%);
+          clip-path: polygon(100% 50%, 80% 50%, 80% 0, 20% 0, 20% 50%, 0 50%, 48% 100%);
   margin: 5px;
   padding: 5px;
 }
 
-.count-up :hover,
 .count-down :hover {
   background-color: blue;
+}
+
+.count-up {
+  margin: 5px;
+  padding: 5px;
+  -webkit-clip-path: polygon(100% 50%, 80% 50%, 80% 100%, 20% 100%, 20% 50%, 0 50%, 50% 0);
+          clip-path: polygon(100% 50%, 80% 50%, 80% 100%, 20% 100%, 20% 50%, 0 50%, 50% 0);
 }
 
 .english {
@@ -77,10 +76,6 @@ button {
   padding: 5px;
 }
 
-p {
-  background-color: inherit;
-}
-
 html {
   width: 100%;
   height: 100%;
@@ -95,7 +90,7 @@ html {
 
 .lower-half {
   background-color: #eed9ba;
-  border: 4px solid #ca3e07;
+  border: 2px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,6 +108,10 @@ html {
   grid-row-end: 13;
   margin: 5px;
   padding: 5px;
+}
+
+p {
+  background-color: inherit;
 }
 
 .page-title {
@@ -141,7 +140,7 @@ span {
 .upper-left {
   background-color: #f18a61;
   background: linear-gradient(to top left, #f18a61 calc(50% - 1px), #f18a61, #eed9ba calc(50% + 1px));
-  border: 4px solid #ca3e07;
+  border: 2px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,7 +164,7 @@ span {
 .upper-right-a {
   background-color: #eed9ba;
   background: linear-gradient(to top left, #f18a61 calc(50% - 1px), #f18a61, #eed9ba calc(50% + 1px));
-  border: 4px solid #ca3e07;
+  border: 2px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,7 +189,7 @@ span {
 .upper-right-b {
   background-color: #f18a61;
   background: linear-gradient(to top right, #eed9ba calc(50% - 1px), #f18a61, #f18a61 calc(50% + 1px));
-  border: 4px solid #ca3e07;
+  border: 2px solid #ca3e07;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
