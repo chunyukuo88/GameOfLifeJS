@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { getNumbersApiUrl } from "./common/urlsAndOptions";
 
 const MathFact = (integerAsObject) => {
-    const count = JSON.stringify(integerAsObject.count);
     const [fact, setFact] = useState('Want facts? Get clicking!');
-    const url = `http://numbersapi.com/${count}/math`;
+    const count = JSON.stringify(integerAsObject.count);
+    const url = getNumbersApiUrl(count);
     const options = { method: "GET", headers: { "Content-type": "text/plain" }};
-    
+
     useEffect(() => {
-        const getFact = async () => { 
+        const getFact = async () => {
             const result = await fetch(url, options).then(res => res.text());
             setFact(result);
          };
         getFact();
      },[url, options, fact]);
+
     return (
         <React.Fragment>
             <p className="fetched-fact">{fetchedMatchesInteger(count, fact) === true ? fact : "Loading fact..."}</p>

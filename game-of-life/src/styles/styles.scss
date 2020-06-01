@@ -1,7 +1,7 @@
 $background: rgb(147, 147, 210);
 $border-color: rgb(202, 62, 7);
 $border-values: 2px solid $border-color;
-$hover-color: rgb(206, 206, 24);
+$hover-color: rgb(24, 109, 206);
 $panel-almond: rgb(238, 217, 186);
 $panel-orange: rgb(241, 138, 97);
 
@@ -29,6 +29,8 @@ $default-padding: 5px;
 
 .count-down{
   clip-path: polygon(100% 50%, 80% 50%, 80% 0, 20% 0, 20% 50%, 0 50%, 48% 100%);
+  background-color: $panel-orange;
+
   margin: $default-margin;
   padding: $default-padding;
 
@@ -38,10 +40,16 @@ $default-padding: 5px;
 }
 
 .count-up{
+  background-color: $panel-orange;
+  clip-path: polygon(100% 50%, 80% 50%, 80% 100%, 20% 100%, 20% 50%, 0 50%, 50% 0);
+
   margin: $default-margin;
   padding: $default-padding;
 
-  clip-path: polygon(100% 50%, 80% 50%, 80% 100%, 20% 100%, 20% 50%, 0 50%, 50% 0);
+
+  & :hover{
+    background-color: $hover-color;
+  }
 }
 
 .english{
@@ -65,19 +73,29 @@ $default-padding: 5px;
 
 .fact-label{
   background-color: inherit;
+  text-align: center;
 }
 
-.visualization-section{
+.fact-section{
   background-color: inherit;
   border: $border-values;
 
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
   grid-row-end: 4;
 
   margin: $default-margin;
   padding: $default-padding;
+}
+
+.fetched-fact{
+  text-align: center;
 }
 
 html{
@@ -194,18 +212,13 @@ span{
   }
 }
 
-.fact-section{
+.visualization-section{
   background-color: inherit;
   border: $border-values;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
   grid-row-end: 4;
 
   margin: $default-margin;
