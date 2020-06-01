@@ -50,8 +50,15 @@ $default-padding: 5px;
 
 .entry-section{
   background-color: inherit;
+  border: $border-values;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
   margin: $default-margin;
   padding: $default-padding;
 }
@@ -60,17 +67,18 @@ $default-padding: 5px;
   background-color: inherit;
 }
 
-.fact-section{
+.visualization-section{
   background-color: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: $border-values;
+
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
 
   margin: $default-margin;
   padding: $default-padding;
 }
-
 
 html{
   width: 100%;
@@ -79,18 +87,19 @@ html{
 }
 
 .integer-input-box{
+  text-align: center;
   margin: 0;
   padding: 0;
-  width: 50px;
+  width: 85%;
 }
 
 .lower-half{
   background-color: $panel-almond;
   border: $border-values;
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   
   grid-column-start: 1;
   grid-column-end: 8;
@@ -183,6 +192,24 @@ span{
   & :hover{
     background-color: inherit;
   }
+}
+
+.fact-section{
+  background-color: inherit;
+  border: $border-values;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+
+  margin: $default-margin;
+  padding: $default-padding;
 }
 
 .華語版本{

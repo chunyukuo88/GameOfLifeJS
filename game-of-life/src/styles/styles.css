@@ -45,10 +45,17 @@
 
 .entry-section {
   background-color: inherit;
+  border: 2px solid #ca3e07;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 1;
   margin: 5px;
   padding: 5px;
 }
@@ -57,21 +64,15 @@
   background-color: inherit;
 }
 
-.fact-section {
+.visualization-section {
   background-color: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: 2px solid #ca3e07;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
   margin: 5px;
   padding: 5px;
 }
@@ -83,23 +84,21 @@ html {
 }
 
 .integer-input-box {
+  text-align: center;
   margin: 0;
   padding: 0;
-  width: 50px;
+  width: 85%;
 }
 
 .lower-half {
   background-color: #eed9ba;
   border: 2px solid #ca3e07;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 8;
@@ -213,6 +212,32 @@ span {
 
 .upper-right-b :hover {
   background-color: inherit;
+}
+
+.fact-section {
+  background-color: inherit;
+  border: 2px solid #ca3e07;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 4;
+  margin: 5px;
+  padding: 5px;
 }
 
 .華語版本 {

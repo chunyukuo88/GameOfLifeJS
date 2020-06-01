@@ -22,7 +22,7 @@ const MathFact = (integerAsObject) => {
 
 const fetchedMatchesInteger = (integer, fact) => {
     const integerFromFact = fact.split(' ')[0];
-    return (integer == integerFromFact);
+    return (integer === integerFromFact);
 };
 
 export default MathFact;

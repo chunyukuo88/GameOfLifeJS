@@ -13,20 +13,24 @@ const App = () => {
     <div className='App-wrapper'>
 
         <UpperHalf />
+
         <section className='lower-half'>
             <section className='entry-section'>
-                <a className='count-up'   onClick={() => setCount(count + 1)}></a>
+                <div className='count-up'   onClick={() => setCount(count + 1)}></div>
                 <input  className='integer-input-box' type="number" onChange={
                   (e) => setCount(parseInt(e.target.value, 10))} value={count}
                 />
-                <a className='count-down' onClick={() => setCount(count - 1)}></a>
+                <div className='count-down' onClick={() => setCount(count - 1)}></div>
             </section>
+
+            <section className='visualization-section'></section>
 
             <section className='fact-section'>
               <p className='fact-label'><span>Now here is a fun fact about the number </span><span>{count}:</span></p>
               <MathFact count={count} />
             </section>
         </section>
+        
     </div>
   );
 }
