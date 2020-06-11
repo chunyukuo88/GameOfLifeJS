@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getNumbersApiUrl } from "./common/urlsAndOptions";
+import { getNumbersApiUrl } from "../common/urlsAndOptions";
 
 const MathFact = (integerAsObject) => {
     const [fact, setFact] = useState('Want facts? Get clicking!');
@@ -27,4 +27,4 @@ const fetchedMatchesInteger = (integer, fact) => {
     return (integer === integerFromFact);
 };
 
-export default MathFact;
+// export default MathFact;
