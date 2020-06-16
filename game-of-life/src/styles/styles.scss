@@ -46,7 +46,6 @@ $default-padding: 5px;
   margin: $default-margin;
   padding: $default-padding;
 
-
   & :hover{
     background-color: $hover-color;
   }
@@ -114,16 +113,16 @@ html{
 .lower-half{
   background-color: $panel-almond;
   border: $border-values;
-  
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  
+
   grid-column-start: 1;
   grid-column-end: 8;
   grid-row-start: 5;
   grid-row-end: 13;
-  
+
   margin: $default-margin;
   padding: $default-padding;
 }

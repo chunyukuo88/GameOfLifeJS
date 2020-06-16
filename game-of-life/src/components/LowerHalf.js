@@ -5,7 +5,7 @@ import FactSection from "./FactSection";
 
 export default function LowerHalf(){
 
-    //Look ma, no prop drilling!
+    //Celebrate with a loaf of bread: No prop drilling!
     return (
           <div className='lower-half'>
               <EntrySection />

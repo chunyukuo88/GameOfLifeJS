@@ -4,7 +4,7 @@ const UpperHalf = () => {
     return (
       <React.Fragment>
         <section className='upper-left'>
-          <h1 className='page-title'>The Splendid Maths</h1>
+          <h1 className='page-title'>Context API With Hooks!</h1>
         </section>
 
         <section className='upper-right-a'>
