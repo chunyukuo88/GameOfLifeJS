@@ -6,6 +6,11 @@ const MathFact = () => {
     const [contextCount] = useContext(CountContext);
     const [fact, setFact] = useState('Want facts? Get clicking!');
 
+    //Todo: Research best practice for where to put this first of two uses of useEffect:
+    useEffect(() => {
+        document.title = `Pondering the number ${count}`;
+    });
+
     const count = JSON.stringify(contextCount);
     const url = getNumbersApiUrl(count);
     const options = { method: "GET", headers: { "Content-type": "text/plain" }};
