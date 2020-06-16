@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { getNumbersApiUrl } from "./common/urlsAndOptions";
+import React, { useState, useEffect, useContext } from 'react';
+import { getNumbersApiUrl } from "../common/urlsAndOptions";
+import { CountContext } from "../context/count-context";
 
 const MathFact = (integerAsObject) => {
+    const [contextCount, setCount] = useContext(CountContext);
     const [fact, setFact] = useState('Want facts? Get clicking!');
-    const count = JSON.stringify(integerAsObject.count);
+    const count = JSON.stringify(contextCount);
     const url = getNumbersApiUrl(count);
     const options = { method: "GET", headers: { "Content-type": "text/plain" }};
 
