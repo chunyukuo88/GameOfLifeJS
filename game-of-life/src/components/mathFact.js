@@ -2,9 +2,10 @@ import React, { useState, useEffect, useContext } from 'react';
 import { getNumbersApiUrl } from "../common/urlsAndOptions";
 import { CountContext } from "../context/count-context";
 
-const MathFact = (integerAsObject) => {
-    const [contextCount, setCount] = useContext(CountContext);
+const MathFact = () => {
+    const [contextCount] = useContext(CountContext);
     const [fact, setFact] = useState('Want facts? Get clicking!');
+
     const count = JSON.stringify(contextCount);
     const url = getNumbersApiUrl(count);
     const options = { method: "GET", headers: { "Content-type": "text/plain" }};
@@ -19,7 +20,12 @@ const MathFact = (integerAsObject) => {
 
     return (
         <React.Fragment>
-            <p className="fetched-fact">{fetchedMatchesInteger(count, fact) === true ? fact : "Loading fact..."}</p>
+            <p className="fetched-fact">
+                {fetchedMatchesInteger(count, fact) === true
+                    ? fact
+                    : "Loading fact..."
+                }
+            </p>
         </React.Fragment>
     );
 };
