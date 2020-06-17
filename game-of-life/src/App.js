@@ -6,19 +6,19 @@ import LowerHalf from './components/LowerHalf';
 
 import { CountContextProvider } from './context/count-context';
 import { ThemeContextProvider } from './context/theme-context';
-import { FactContextProvider } from "./context/fact-context";
+import { UserContextProvider } from "./context/user-context";
 
 const App = () => {
   return (
       <ThemeContextProvider>
-          <FactContextProvider>
+          <UserContextProvider>
               <CountContextProvider>
                 <div className='App-wrapper'>
                     <UpperHalf />
                     <LowerHalf />
                 </div>
               </CountContextProvider>
-          </FactContextProvider>
+          </UserContextProvider>
       </ThemeContextProvider>
   );
 };
