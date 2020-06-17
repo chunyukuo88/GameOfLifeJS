@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { FactContext } from "../context/fact-context";
 
 const UpperHalf = () => {
+    const [ fact, setFact ] = useContext(FactContext);
+
     return (
       <React.Fragment>
         <section className='upper-left'>

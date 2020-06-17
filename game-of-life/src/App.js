@@ -3,18 +3,22 @@ import './styles/input.css';
 import './styles/styles.css';
 import UpperHalf from './components/UpperHalf';
 import LowerHalf from './components/LowerHalf';
+
 import { CountContextProvider } from './context/count-context';
-import {ThemeContextProvider} from "./context/theme-context";
+import { ThemeContextProvider } from './context/theme-context';
+import { FactContextProvider } from "./context/fact-context";
 
 const App = () => {
   return (
       <ThemeContextProvider>
-          <CountContextProvider>
-            <div className='App-wrapper'>
-                <UpperHalf />
-                <LowerHalf />
-            </div>
-          </CountContextProvider>
+          <FactContextProvider>
+              <CountContextProvider>
+                <div className='App-wrapper'>
+                    <UpperHalf />
+                    <LowerHalf />
+                </div>
+              </CountContextProvider>
+          </FactContextProvider>
       </ThemeContextProvider>
   );
 };
