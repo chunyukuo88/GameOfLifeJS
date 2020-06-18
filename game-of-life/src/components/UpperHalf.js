@@ -3,11 +3,12 @@ import { UserContext } from "../context/user-context";
 
 const UpperHalf = () => {
     const [ userData ] = useContext(UserContext);
+    const termOfAddressToUser = (userData.name) ? userData.name : 'friend';
 
     return (
       <React.Fragment>
         <section className='upper-left'>
-          {/*<h1 className='page-title'>Welcome, {userData[0].name}!</h1>*/}
+          <h1 className='page-title'>Welcome, {termOfAddressToUser}!</h1>
         </section>
 
         <section className='upper-right-a'>
