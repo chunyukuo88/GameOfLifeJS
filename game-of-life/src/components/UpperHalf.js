@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { UserContext } from "../context/user-context";
 
 const UpperHalf = () => {
+    const [ userData ] = useContext(UserContext);
 
     return (
       <React.Fragment>
         <section className='upper-left'>
-          <h1 className='page-title'>Context API With Hooks!</h1>
+          <h1 className='page-title'>Welcome, {userData[0].name}!</h1>
         </section>
 
         <section className='upper-right-a'>

@@ -1,1 +1,1 @@
-export const getNumbersApiUrl = (integer) => `http://numbersapi.com/${integer}/math`;
+export const getNumbersApiUrl = integer => `http://numbersapi.com/${integer}/math`;
