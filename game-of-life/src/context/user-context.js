@@ -31,7 +31,7 @@ export const UserContextProvider = props => {
     useEffect(() => {
         const getUserArray = async () => {
             const result = await fetch(url, options).then(res => res.json());
-            setUserData(result);
+            setUserData(result[0]);
         };
         getUserArray();
     },[url, options, userData]);

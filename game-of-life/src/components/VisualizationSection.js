@@ -9,13 +9,15 @@ export default function EntrySection(){
         <React.Fragment>
             <h1>Global state taken from a fetch call⮕</h1>
             <div>
-                Name: {userData[0].name}<br/>
-                ID: {userData[0].id}<br/>
-                Phone: {userData[0].phone}<br/>
-                Site: {userData[0].website}
+                Name: {userData.name}<br/>
+                ID: {userData.id}<br/>
+                Phone: {userData.phone}<br/>
+                Site: {userData.website}
             </div>
         </React.Fragment>
     );
+
+
 
 
 

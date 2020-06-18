@@ -7,7 +7,7 @@ const UpperHalf = () => {
     return (
       <React.Fragment>
         <section className='upper-left'>
-          <h1 className='page-title'>Welcome, {userData[0].name}!</h1>
+          {/*<h1 className='page-title'>Welcome, {userData[0].name}!</h1>*/}
         </section>
 
         <section className='upper-right-a'>
