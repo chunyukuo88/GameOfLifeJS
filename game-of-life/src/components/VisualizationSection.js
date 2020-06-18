@@ -4,11 +4,24 @@ import { UserContext } from "../context/user-context";
 export default function EntrySection(){
     const [ userData, setUserData ] = useContext(UserContext);
 
-    const changePhoneNumber = () => setUserData({'phone' : '1-800-FLOWERS'});
-    const changeId = () => setUserData({'id' : '2'}, console.log(`Phone: ${userData.id}`));
+    function changePhoneNumber (){
+        const clone = {...userData};
+        clone.phone = '123';
+        setUserData(clone);
+    };
+
+    function changeId (){
+        const clone = {...userData};
+        clone.id = 'Forgot it at the pool, sorry';
+        setUserData(clone);
+    }
+
+
+
     const buttonStyle = {
         fontSize: '4rem'
     }
+    console.log(JSON.stringify(userData));
 
     return (
         <React.Fragment>
