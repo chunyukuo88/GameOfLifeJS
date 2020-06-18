@@ -6,34 +6,53 @@ export default function EntrySection(){
 
     function changePhoneNumber (){
         const clone = {...userData};
-        clone.phone = '123';
+        clone.phone = '1-800-KARATE';
         setUserData(clone);
     };
 
-    function changeId (){
+    function typedPhoneNumber (input){
         const clone = {...userData};
-        clone.id = 'Forgot it at the pool, sorry';
+        clone.phone = input;
+        setUserData(clone);
+    };
+
+    function changeName (){
+        const clone = {...userData};
+        clone.name = 'Chuck Norris';
         setUserData(clone);
     }
 
-
-
-    const buttonStyle = {
-        fontSize: '4rem'
+    function typedName (input){
+        const clone = {...userData};
+        clone.name = input;
+        setUserData(clone);
     }
-    console.log(JSON.stringify(userData));
 
+    const buttonStyle = {fontSize: '1.7rem'};
+    const someWhiteSpace = {
+        'padding' : '2px',
+        'border': '2px',
+        'margin': '2px'};
     return (
-        <React.Fragment>
-                <h1>Global state taken from a fetch call⮕</h1>
+        <React.Fragment >
+                <h1>Global state from a fetch call⮕</h1>
                 <div>
                     Name: {userData.name}<br/>
                     ID: {userData.id}<br/>
                     Phone: {userData.phone}<br/>
                     Site: {userData.website}
                 </div>
-                <button style={buttonStyle} onClick={changePhoneNumber}>Change ☎️</button>
-                <button style={buttonStyle} onClick={changeId}>Change ID️</button>
+                <div>
+
+                    <button onClick={changePhoneNumber} style={buttonStyle}>Change ☎️</button>
+                    <button onClick={changeName} style={buttonStyle}>Become Chuck️</button>
+                    <input  className='phone-input-box' type='number'
+                            onChange={
+                                (e) => typedPhoneNumber(parseInt(e.target.value, 10))
+                            }/>
+                    <input  className='name-input-box' type='text'
+                            onChange={(e) => typedName(e.target.value)}/>
+                </div>
         </React.Fragment>
     );
 };
