@@ -10,12 +10,12 @@ export const UserContextProvider = props => {
 
     useEffect(() => {
         const getUserArray = async () => {
-            const result = await fetch(dummyUserUrl, dummyUserOptions)
-                                    .then(res => res.json());
+            const result = await fetch(dummyUserUrl, dummyUserOptions).then(res => res.json());
             setUserData(result[0]);
         };
-        // getUserArray(); Uncommenting causes an infinite loop visible only via the console log on line 9.
-    },[dummyUserUrl, dummyUserOptions, userData]);
+        //Uncommenting this next line causes an infinite loop visible via console.log():
+        getUserArray();
+    },[]);
 
     return (
         <UserContext.Provider value={[userData, setUserData]}>
