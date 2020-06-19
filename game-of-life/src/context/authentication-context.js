@@ -1,0 +1,20 @@
+import React, { useState, createContext } from 'react';
+import {ThemeContext} from "./theme-context";
+
+
+export const AuthContext = createContext();
+
+const initialState = {
+    isAuthenticated: false
+};
+
+export const AuthContextProvider = props => {
+    const [status, setStatus] = useState(initialState);
+
+    return (
+        <AuthContext.Provider value={[status, setStatus]}>
+            {props.children}
+        </AuthContext.Provider>
+    );
+};
+

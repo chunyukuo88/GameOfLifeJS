@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { UserContext } from "../context/user-context";
+import { AuthContext } from "../context/authentication-context";
 
 export default function EntrySection(){
     const [ userData, setUserData ] = useContext(UserContext);
+    const [ authStatus, setAuthStatus ] = useContext(AuthContext);
 
     function changePhoneNumber (){
         const clone = {...userData};
@@ -28,14 +30,21 @@ export default function EntrySection(){
         setUserData(clone);
     }
 
-    const buttonStyle = {fontSize: '1.7rem'};
-    const someWhiteSpace = {
-        'padding' : '2px',
-        'border': '2px',
-        'margin': '2px'};
+    function setToAuthenticated(){
+        setAuthStatus({'isAuthenticated': true});
+        console.log(`User is authenticated: ${authStatus.isAuthenticated}`);
+    }
+
+    console.log(`User is authenticated: ${authStatus.isAuthenticated}`);
+
+    const buttonStyle = {fontSize: '1.5rem'};
+
     return (
-        <React.Fragment >
-                <h1>Global state from a fetch call⮕</h1>
+        <React.Fragment>
+
+                <button onClick={setToAuthenticated} style={buttonStyle}>
+                    Press to update global state via fetch() call
+                </button>
                 <div>
                     Name: {userData.name}<br/>
                     ID: {userData.id}<br/>

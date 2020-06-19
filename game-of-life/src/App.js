@@ -7,19 +7,22 @@ import LowerHalf from './components/LowerHalf';
 import { CountContextProvider } from './context/count-context';
 import { ThemeContextProvider } from './context/theme-context';
 import { UserContextProvider } from "./context/user-context";
+import { AuthContextProvider } from "./context/authentication-context";
 
 const App = () => {
   return (
-      <ThemeContextProvider>
-          <UserContextProvider>
-              <CountContextProvider>
-                <div className='App-wrapper'>
-                    <UpperHalf />
-                    <LowerHalf />
-                </div>
-              </CountContextProvider>
-          </UserContextProvider>
-      </ThemeContextProvider>
+      <AuthContextProvider>
+          <ThemeContextProvider>
+              <UserContextProvider>
+                  <CountContextProvider>
+                    <div className='App-wrapper'>
+                        <UpperHalf />
+                        <LowerHalf />
+                    </div>
+                  </CountContextProvider>
+              </UserContextProvider>
+          </ThemeContextProvider>
+      </AuthContextProvider>
   );
 };
 
