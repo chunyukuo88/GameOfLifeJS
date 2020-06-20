@@ -1,5 +1,5 @@
 const userModel = {
-    id: 0,
+    id: null,
     name: '',
     username: '',
     email: '',
@@ -21,3 +21,5 @@ const userModel = {
         bs: '',
     }
 };
+
+export default userModel;

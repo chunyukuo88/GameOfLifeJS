@@ -32,36 +32,32 @@ export default function EntrySection(){
 
     function setToAuthenticated(){
         setAuthStatus({'isAuthenticated': true});
-        console.log(`User is authenticated: ${authStatus.isAuthenticated}`);
     }
-
-    console.log(`User is authenticated: ${authStatus.isAuthenticated}`);
 
     const buttonStyle = {fontSize: '1.5rem'};
 
     return (
         <React.Fragment>
+            <button onClick={setToAuthenticated} style={buttonStyle}>
+                Press to update global state via fetch() call
+            </button>
+            <div>
+                Name: {userData.name}<br/>
+                ID: {userData.id}<br/>
+                Phone: {userData.phone}<br/>
+                Site: {userData.website}
+            </div>
+            <div>
 
-                <button onClick={setToAuthenticated} style={buttonStyle}>
-                    Press to update global state via fetch() call
-                </button>
-                <div>
-                    Name: {userData.name}<br/>
-                    ID: {userData.id}<br/>
-                    Phone: {userData.phone}<br/>
-                    Site: {userData.website}
-                </div>
-                <div>
-
-                    <button onClick={changePhoneNumber} style={buttonStyle}>Change ☎️</button>
-                    <button onClick={changeName} style={buttonStyle}>Become Chuck️</button>
-                    <input  className='phone-input-box' type='number'
-                            onChange={
-                                (e) => typedPhoneNumber(parseInt(e.target.value, 10))
-                            }/>
-                    <input  className='name-input-box' type='text'
-                            onChange={(e) => typedName(e.target.value)}/>
-                </div>
+                <button onClick={changePhoneNumber} style={buttonStyle}>Change ☎️</button>
+                <button onClick={changeName} style={buttonStyle}>Become Chuck️</button>
+                <input  className='phone-input-box' type='number'
+                        onChange={
+                            (e) => typedPhoneNumber(parseInt(e.target.value, 10))
+                        }/>
+                <input  className='name-input-box' type='text'
+                        onChange={(e) => typedName(e.target.value)}/>
+            </div>
         </React.Fragment>
     );
 };

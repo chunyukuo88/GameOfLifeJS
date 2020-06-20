@@ -9,8 +9,7 @@ import { ThemeContextProvider } from './context/theme-context';
 import { UserContextProvider } from "./context/user-context";
 import { AuthContextProvider } from "./context/authentication-context";
 
-const App = () => {
-  return (
+const App = () => (
       <AuthContextProvider>
           <ThemeContextProvider>
               <UserContextProvider>
@@ -23,7 +22,7 @@ const App = () => {
               </UserContextProvider>
           </ThemeContextProvider>
       </AuthContextProvider>
-  );
-};
+);
+
 
 export default App;

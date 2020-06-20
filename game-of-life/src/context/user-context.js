@@ -1,25 +1,22 @@
 import React, {useState, useEffect, createContext, useContext} from 'react';
 import { dummyUserUrl, dummyUserOptions } from '../common/urlsAndOptions';
 import { AuthContext } from "../context/authentication-context";
-
 import userModel from './user-model';
 
 export const UserContext = createContext();
 
 export const UserContextProvider = props => {
     const [ authStatus ] = useContext(AuthContext);
-    const [userData, setUserData] = useState(userModel);
+    const [ userData, setUserData ] = useState(userModel);
 
-
+    async function getUserArray() {
+        const result = await fetch(dummyUserUrl, dummyUserOptions).then(res => res.json());
+        setUserData(result[0]);
+    };
 
     useEffect(() => {
-        const getUserArray = () => {
-            const result = fetch(dummyUserUrl, dummyUserOptions).then(res => res.json());
-            console.log('getUserArray()');
-            setUserData(result[0]);
-        };
-        if (authStatus === true) {
-        getUserArray();
+        if (authStatus.isAuthenticated === true) {
+            getUserArray();
         }
     },[authStatus]);
 
